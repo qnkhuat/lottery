@@ -40,29 +40,47 @@ class lottery(scrapy.Spider):
     name='lot'
 
     def __init__(self):
+        self.file_path='./excels/lottery100.xlsx'
         try:
-            wb=openpyxl.load_workbook('lottery.xlsx')
+            wb=openpyxl.load_workbook(self.file_path)
+            self.exist=True
         except:
             wb=openpyxl.Workbook()
-            wb.save('lottery.xlsx')
+            wb.save(self.file_path)
+            self.exist=False
 
-        wb=openpyxl.load_workbook('lottery.xlsx')
-        sheet = wb.active
+
         #get the max row to update
-        self.row=sheet.max_row if sheet.max_row !=0 else 1
+        wb=openpyxl.load_workbook(self.file_path)
+        sheet = wb.active
+
+        self.row=sheet.max_row if sheet.max_row !=0 else 1#keep track current line to write
         self.date = ''
 
 
-
+        #generate urls
         years=[2018]
-        months=[4,5]
+        months=[1,2,3,4]
         self.start_urls=get_urls(years,months)
-        self.current=0
+        self.current=0#keep track current date to write
 
+    #create freeze line
+    def free_panes(self):
+
+        wb=openpyxl.load_workbook(self.file_path)
+        sheet = wb.active
+        for i in range(0,100):
+            sheet.cell(row=self.row,column=i+2).value = i
+        sheet.freeze_panes='A2'
+        self.row+=1
+        wb.save(self.file_path)
 
 
 
     def start_requests(self):
+        if not self.exist:
+            self.free_panes()
+
         date= self.start_urls[self.current].split('=')
         yield scrapy.Request(url=self.start_urls[self.current],callback=self.parse,meta={'date':date[1]})
 
@@ -78,7 +96,7 @@ class lottery(scrapy.Spider):
                 numbers[number]+=1
 
 
-            wb=openpyxl.load_workbook('lottery.xlsx')
+            wb=openpyxl.load_workbook(self.file_path)
             sheet = wb.active
 
             #write datetime
@@ -86,14 +104,15 @@ class lottery(scrapy.Spider):
 
 
             ##write numbers
-            for col,val in numbers.items():
+            for idx,val in numbers.items():
                 if val!=0:
-                    sheet.cell(row=self.row,column=col+2).value=val
-                    sheet.cell(row=self.row,column=col+2).fill=get_color(val)
+                    sheet.cell(row=self.row,column=idx+2).value=val
+                    sheet.cell(row=self.row,column=idx+2).fill=get_color(val)
             self.row+=1
 
-            wb.save('lottery.xlsx')
+            wb.save(self.file_path)
 
+        #update current line
         self.current+=1
         date= self.start_urls[self.current].split('=')
         yield scrapy.Request(url=self.start_urls[self.current],callback=self.parse,meta={'date':date[1]})
