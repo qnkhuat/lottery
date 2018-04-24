@@ -19,6 +19,7 @@ import datetime
 '''
 # NOTE: global vairble
 date_col=1
+data_path='./excels/history.xlsx'
 
 
 # NOTE: handle excel file
@@ -60,14 +61,15 @@ def write_new_date(date,data,file_path):
 
     i=2#to keep track of how many number we write
     for number,amount in data.items():
-        row_for_number= max_row+1
-        row_for_amount= max_row+2
+        row_for_number= max_row
+        row_for_amount= max_row+1
         sheet.cell(row=row_for_number,column=i).value=number
         sheet.cell(row=row_for_amount,column=i).value=amount
         i+=1
 
-    sheet.cell(row=max_row+1,column=date_col).value=date
-    sheet.merge_cells(start_row=int(max_row+1),start_column=date_col,end_row=int(max_row+2),end_column=date_col)
+    sheet.cell(row=max_row,column=date_col).value=date
+
+    sheet.merge_cells(start_row=int(max_row),start_column=date_col,end_row=int(max_row+1),end_column=date_col)
 
 
     wb.save(file_path)
@@ -79,7 +81,34 @@ def write_new_date(date,data,file_path):
 
 # IDEA: convert all data to dict and use this to do all check_win,check_balance
 def convert_data():
-    pass
+    '''
+    data[date]={
+        number:[],
+        amount:[]
+    }
+    '''
+    wb,sheet,max_row,max_col = open_file(data_path,active=True)
+
+    data={}
+    for i in range(1,max_row+1,2):# NOTE: loop through date
+        temp={}
+        numbers=[]
+        amounts=[]
+        for j in range(2,max_col+1):# NOTE: loop through numbers
+
+            number = sheet.cell(row=i,column=j).value
+            amount = sheet.cell(row=i+1,column=j).value
+
+            if number is not None and amount is not None:
+                numbers.append(number)
+                amounts.append(amount)
+
+
+        temp['number']= numbers
+        temp['amount']= amounts
+        data[sheet.cell(row=i,column=date_col).value]=temp
+
+    return data
 
 def check_win():
     pass
@@ -93,7 +122,6 @@ def get_history():
 
 
 def input_data(file_path):
-
     '''
     ask how many number first
     then ask for number and amount for each of it
@@ -109,7 +137,6 @@ def input_data(file_path):
     data ={}
     while not stop:
         number = input_digit('Đánh con nào?(Hết thì đánh stop)\n')
-
         if  number.isdigit():
             amount = input_digit('Bao nhiêu trứng?\n')
             data[number]=amount
@@ -121,7 +148,6 @@ def input_data(file_path):
 
 
 # NOTE: input _ulis
-
 def date_valid(date):
     try:
         datetime.datetime.strptime(date, '%d/%m/%Y')
@@ -129,43 +155,10 @@ def date_valid(date):
         return False
     return True
 
-def input_date():
-
-    current_year = datetime.datetime.now().year
-    while True:
-        try:
-            date = input('Đi chợ ngày nào thế?(dd/mm)\n')+'/'+ current_year
-            datetime.datetime.strptime(date, '%Y-%m-%d')
-            stop=False
-        except :
-            return date
-
-#
-# def input_date():
-#     current_year = datetime.datetime.now().year
-#     stop=False
-#     while  not stop:
-#         date = input('Đi chợ ngày nào thế?(dd/mm)\n')+'/'+now.year
-#         if datetime.datetime.strptime(date, '%d/%m/%Y')
-#
-
-
-
-    while True:
-        if input('Đi chợ ngày nào thế?(dd/mm)\n')+'/'+now.year :# BUG: add method to check valid date and auto fill current year:
-            return datetime.datetime.strptime(date, '%d/%m/%Y')
-
-        else:
-            print('Ngày không hợp lệ')
-            input('Đi chợ ngày nào thế?(dd/mm)\n')+'/'+now.year
-
-
 
 
 
 def input_digit(content):
-
-
     while True:
         value = input(content)
         if value=='stop':
