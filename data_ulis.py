@@ -1,6 +1,6 @@
 from tkinter import *
 import openpyxl as xl
-
+import datetime
 '''
 - Check balance
 - Input
@@ -98,8 +98,11 @@ def input_data(file_path):
     ask how many number first
     then ask for number and amount for each of it
     '''
-
-    date = input('Đi chợ ngày nào thế?(dd/mm)\n')+'/2018'# BUG: add method to check valid date and auto fill current year
+    current_year = str(datetime.datetime.now().year)
+    date = input('Đi chợ ngày nào thế?(dd/mm)\n')+'/'+ current_year
+    while not date_valid(date):
+        print('Ngày không hợp lệ')
+        date = input('Đi chợ ngày nào thế?(dd/mm)\n')+'/'+ current_year
 
 
     stop = False
@@ -118,16 +121,56 @@ def input_data(file_path):
 
 
 # NOTE: input _ulis
+
+def date_valid(date):
+    try:
+        datetime.datetime.strptime(date, '%d/%m/%Y')
+    except :
+        return False
+    return True
+
+def input_date():
+
+    current_year = datetime.datetime.now().year
+    while True:
+        try:
+            date = input('Đi chợ ngày nào thế?(dd/mm)\n')+'/'+ current_year
+            datetime.datetime.strptime(date, '%Y-%m-%d')
+            stop=False
+        except :
+            return date
+
+#
+# def input_date():
+#     current_year = datetime.datetime.now().year
+#     stop=False
+#     while  not stop:
+#         date = input('Đi chợ ngày nào thế?(dd/mm)\n')+'/'+now.year
+#         if datetime.datetime.strptime(date, '%d/%m/%Y')
+#
+
+
+
+    while True:
+        if input('Đi chợ ngày nào thế?(dd/mm)\n')+'/'+now.year :# BUG: add method to check valid date and auto fill current year:
+            return datetime.datetime.strptime(date, '%d/%m/%Y')
+
+        else:
+            print('Ngày không hợp lệ')
+            input('Đi chợ ngày nào thế?(dd/mm)\n')+'/'+now.year
+
+
+
+
+
 def input_digit(content):
 
-    stop = False
-    while not stop:
+
+    while True:
         value = input(content)
         if value=='stop':
-            stop = True
+            return value
         elif value.isdigit():
-            stop = True
+            return value
         else :
             print('Không hợp lệ')
-
-    return value
