@@ -86,7 +86,7 @@ def write_new_date(date,data,file_path):
 
 
 # IDEA: convert all data to dict and use this to do all check_win,check_balance
-def convert_data(path_dir):
+def convert_history_to_dict(path_dir):
     '''
     data[date]={
         number:[],
@@ -119,12 +119,45 @@ def convert_data(path_dir):
 
     return data
 
+def convert_data_to_dict(path_dir):
+    '''
+    data[date]=[0,0,0,1,3,0...]
+    '''
+    wb,sheet,max_row,max_col = open_file(path_dir,active=True)
+
+    data={}
+    for i in range(2,max_row+1,1):# NOTE: loop through date
+        temp=[]
+        for j in range(2,max_col+1):# NOTE: loop through numbers
+            amount_of_win_number = 0 if sheet.cell(row=i,column=j).value is None else sheet.cell(row=i,column=j).value
+            temp.append(amount_of_win_number)
+        data[sheet.cell(row=i,column=date_col).value]=temp
+    return data
+
+
 def check_win():
+    capital = 50000000#start capital
+    win_rate = 80/22
 
-    history=convert_data(history_path)
-    data=convert_data(data_path)
+    win_money_per_tickey=80000
+    money_per_ticket=22000
 
-    pprint.pprint(data)
+    history=convert_history_to_dict(history_path)
+    data=convert_data_to_dict(data_path)
+    for date in history.keys():
+        day = history[date]
+        day_result = data[date]
+        for idx,number in enumerate(day['number']):
+            capital -= int(day['amount'][idx])*money_per_ticket # NOTE: first it will minus your fee
+            capital += int(day['amount'][idx])*win_money_per_tickey*day_result[int(number)] # NOTE: then will plus with win and multiple rate
+
+    print(capital)
+
+
+
+
+
+
 
 def check_balance():
     pass
