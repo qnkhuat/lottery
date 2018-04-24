@@ -15,9 +15,9 @@ TODO:
 
 def main():
     file_path='./excels/history.xlsx'
-    # input_data(file_path)
+    input_data(file_path)
     # check_win()
-    convert_data('./excels/history.xlsx')
+    # convert_data('./excels/history.xlsx')
 
 
 if __name__=='__main__':

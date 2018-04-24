@@ -2,6 +2,7 @@ from tkinter import *
 import openpyxl as xl
 import datetime
 import re
+import pprint
 '''
 - Check balance
 - Input
@@ -20,7 +21,8 @@ import re
 '''
 # NOTE: global vairble
 date_col=1
-data_path='./excels/history.xlsx'
+history_path='./excels/history.xlsx'
+data_path='./excels/lottery100.xlsx'
 
 
 # NOTE: handle excel file
@@ -111,15 +113,18 @@ def convert_data(path_dir):
 
         temp['number']= numbers
         temp['amount']= amounts
-        data[sheet.cell(row=i,column=date_col).value]=temp
+        date=sheet.cell(row=i,column=date_col).value
+        data[date]=temp
 
 
     return data
 
 def check_win():
 
+    history=convert_data(history_path)
     data=convert_data(data_path)
-    print(data)
+
+    pprint.pprint(data)
 
 def check_balance():
     pass
@@ -140,6 +145,7 @@ def input_data(file_path):
     while not stop:
         date = input('Đi chợ ngày nào thế?(dd/mm)\n')+'/'+ current_year
         if date_valid(date):
+            date =datetime.datetime.strptime(date, '%d/%m/%Y').strftime('%d-%m-%Y')
             stop=True
         else:
             print('Ngày không hợp lệ')
