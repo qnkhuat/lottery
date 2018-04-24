@@ -1,6 +1,7 @@
 from tkinter import *
 import openpyxl as xl
 import datetime
+import re
 '''
 - Check balance
 - Input
@@ -33,6 +34,7 @@ def open_file(file_path,active=False):# XXX: create a saving file
 
     if active:
         sheet=wb.active
+
         return wb,wb.active,sheet.max_row,sheet.max_column # NOTE: max_row is the current row has written
     else:
         return wb
@@ -61,15 +63,17 @@ def write_new_date(date,data,file_path):
 
     i=2#to keep track of how many number we write
     for number,amount in data.items():
-        row_for_number= max_row
-        row_for_amount= max_row+1
+        row_for_number= max_row+1
+        row_for_amount= max_row+2
         sheet.cell(row=row_for_number,column=i).value=number
         sheet.cell(row=row_for_amount,column=i).value=amount
         i+=1
 
-    sheet.cell(row=max_row,column=date_col).value=date
+    sheet.cell(row=max_row+1,column=date_col).value=date
+    # print(max_row)
 
-    sheet.merge_cells(start_row=int(max_row),start_column=date_col,end_row=int(max_row+1),end_column=date_col)
+
+    sheet.merge_cells(start_row=int(max_row+1),start_column=date_col,end_row=int(max_row+2),end_column=date_col)
 
 
     wb.save(file_path)
@@ -80,17 +84,17 @@ def write_new_date(date,data,file_path):
 
 
 # IDEA: convert all data to dict and use this to do all check_win,check_balance
-def convert_data():
+def convert_data(path_dir):
     '''
     data[date]={
         number:[],
         amount:[]
     }
     '''
-    wb,sheet,max_row,max_col = open_file(data_path,active=True)
+    wb,sheet,max_row,max_col = open_file(path_dir,active=True)
 
     data={}
-    for i in range(1,max_row+1,2):# NOTE: loop through date
+    for i in range(2,max_row+1,2):# NOTE: loop through date
         temp={}
         numbers=[]
         amounts=[]
@@ -98,6 +102,7 @@ def convert_data():
 
             number = sheet.cell(row=i,column=j).value
             amount = sheet.cell(row=i+1,column=j).value
+
 
             if number is not None and amount is not None:
                 numbers.append(number)
@@ -108,10 +113,13 @@ def convert_data():
         temp['amount']= amounts
         data[sheet.cell(row=i,column=date_col).value]=temp
 
+
     return data
 
 def check_win():
-    pass
+
+    data=convert_data(data_path)
+    print(data)
 
 def check_balance():
     pass
@@ -127,21 +135,33 @@ def input_data(file_path):
     then ask for number and amount for each of it
     '''
     current_year = str(datetime.datetime.now().year)
-    date = input('Đi chợ ngày nào thế?(dd/mm)\n')+'/'+ current_year
-    while not date_valid(date):
-        print('Ngày không hợp lệ')
+
+    stop =False
+    while not stop:
         date = input('Đi chợ ngày nào thế?(dd/mm)\n')+'/'+ current_year
+        if date_valid(date):
+            stop=True
+        else:
+            print('Ngày không hợp lệ')
+
 
 
     stop = False
     data ={}
+    all_number=[]#keep track to avoid lặp số
     while not stop:
         number = input_digit('Đánh con nào?(Hết thì đánh stop)\n')
         if  number.isdigit():
             amount = input_digit('Bao nhiêu trứng?\n')
-            data[number]=amount
+            if number in all_number:
+                data[number]= int(amount) + int(data[number])
+            else:
+                data[number]=amount
+
+            all_number.append(number)
         else:
             stop =True
+
 
     write_new_date(date,data,file_path)
 
@@ -149,6 +169,7 @@ def input_data(file_path):
 
 # NOTE: input _ulis
 def date_valid(date):
+
     try:
         datetime.datetime.strptime(date, '%d/%m/%Y')
     except :
