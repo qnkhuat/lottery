@@ -1,5 +1,8 @@
 from tkinter import *
+<<<<<<< HEAD
 import openpyxl as xl
+=======
+>>>>>>> 12d27c74cf4a9645260c82421f6ff8dafb9f3501
 '''
 - Check balance
 - Input
@@ -16,6 +19,7 @@ import openpyxl as xl
 - to search,display : loop thourgh the data and create a dictionary.
 
 '''
+<<<<<<< HEAD
 # NOTE: global vairble
 date_col=1
 
@@ -38,16 +42,40 @@ def open_file(file_path,active=False):# XXX: create a saving file
 
 
 def write_to_sheet(col_name,row,col,sheet,content):# XXX: method to write into excel
+=======
+
+
+# XXX: create a saving file
+def open_file(file_path):
+    try:
+        wb=openpyxl.load_workbook(self.file_path)
+    except:
+        wb=openpyxl.Workbook()
+        wb.save(self.file_path)
+
+    return wb
+
+
+
+# XXX: method to write into excel
+def write_to_sheet(col_name,row,sheet,content):
+>>>>>>> 12d27c74cf4a9645260c82421f6ff8dafb9f3501
     '''
     Usange
     col_name =[date,number,amount]
     row: row to write
     '''
+<<<<<<< HEAD
+=======
+    col =1 if col_name=='date' else 2 if col_name =='number' else 3 # NOTE: 3 when col_name==amount
+
+>>>>>>> 12d27c74cf4a9645260c82421f6ff8dafb9f3501
     sheet.cell(row=row,column=col).value = content
     return sheet
 
 
 
+<<<<<<< HEAD
 def write_new_date(date,data,file_path):
     '''
     data = {number:amount}
@@ -80,6 +108,8 @@ def write_new_date(date,data,file_path):
 
 
 
+=======
+>>>>>>> 12d27c74cf4a9645260c82421f6ff8dafb9f3501
 
 # IDEA: convert all data to dict and use this to do all check_win,check_balance
 def convert_data():
@@ -96,7 +126,11 @@ def get_history():
 
 
 
+<<<<<<< HEAD
 def input_data(file_path):
+=======
+def input_data():
+>>>>>>> 12d27c74cf4a9645260c82421f6ff8dafb9f3501
     '''
     ask how many number first
     then ask for number and amount for each of it
@@ -116,12 +150,27 @@ def input_data(file_path):
         else:
             stop =True
 
+<<<<<<< HEAD
     write_new_date(date,data,file_path)
+=======
+
+    print(data)
+
+
+    pass
+
+
+
+>>>>>>> 12d27c74cf4a9645260c82421f6ff8dafb9f3501
 
 
 
 
+<<<<<<< HEAD
 # NOTE: input ulis
+=======
+# NOTE: input _ulis
+>>>>>>> 12d27c74cf4a9645260c82421f6ff8dafb9f3501
 
 def input_digit(content):
 
