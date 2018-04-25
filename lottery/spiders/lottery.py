@@ -4,36 +4,9 @@ import pprint
 import openpyxl
 from openpyxl.styles import Color, PatternFill, Font, Border
 from calendar import Calendar
+from pprint import pprint
+from data_ulis import get_list_of_N_day_ago
 
-
-
-def get_urls(years,months):
-
-    start_urls=[]
-    href='http://ketqua.net/xo-so-mien-bac.php?ngay='
-    now=datetime.datetime.now()
-    current_date= now.date()
-    current_time = now.time()
-    today6pm = now.replace(hour=18, minute=30, second=0, microsecond=0)
-    for year in years:
-        for mo in months:
-            days = Calendar().itermonthdates(year,mo)
-            for day in days:
-                if day.month == mo:
-
-                    if day<current_date:
-                        url=href+ day.strftime('%d-%m-%Y')
-                        start_urls.append(url)
-                    elif day==current_date:
-                        if now > today6pm:
-                            url=href+ day.strftime('%d-%m-%Y')
-                            start_urls.append(url)
-                            break
-                        else:
-                            #update date to write initial col
-                            break
-
-    return start_urls
 
 
 def get_color(number):
@@ -73,9 +46,8 @@ class lottery(scrapy.Spider):
 
 
         #generate urls
-        years=[2018]
-        months=[4]
-        self.start_urls=get_urls(years,months)
+
+        days,self.start_urls=get_list_of_N_day_ago(100)
         self.current=0#keep track current date to write
 
     #create freeze line

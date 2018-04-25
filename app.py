@@ -11,7 +11,7 @@ TODO:
 - auto check win-lost method :DONE
 - auto compute balance : DONE
 - rewrite the scrawl method:DONE
-- write update result method:
+- write update result method:DOING
 '''
 
 
