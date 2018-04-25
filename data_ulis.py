@@ -157,8 +157,6 @@ def check_win():
 
 
 
-
-
 def check_balance():
     pass
 

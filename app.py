@@ -8,9 +8,9 @@ from data_ulis import *
 TODO:
 - create input method note : DONE
 - create cover data: DONE
-- auto check win-lost method :DOING
-- auto compute balance
-- rewrite the scrawl method:
+- auto check win-lost method :DONE
+- auto compute balance : DONE
+- rewrite the scrawl method:DONE
 - write update result method:
 '''
 
