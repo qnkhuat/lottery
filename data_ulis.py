@@ -3,6 +3,7 @@ import openpyxl as xl
 import datetime
 import re
 from pprint import pprint
+from openpyxl.styles import Color, PatternFill, Font, Border
 '''
 - Check balance
 - Input
@@ -135,7 +136,7 @@ def convert_data_to_dict(path_dir):
     return data
 
 
-def check_win():
+def check_balance():
     capital = 50000000#start capital
     win_rate = 80/22
 
@@ -151,18 +152,58 @@ def check_win():
             capital -= int(day['amount'][idx])*money_per_ticket # NOTE: first it will minus your fee
             capital += int(day['amount'][idx])*win_money_per_tickey*day_result[int(number)] # NOTE: then will plus with win and multiple rate
 
-    print(capital)
-
-
-
-
-
-def check_balance():
-    pass
+    return capital
 
 def get_history():
     pass
 
+def scrawl_day(days,urls):
+    import bs4
+    import requests
+
+    for idx,day in enumerate(days):
+        res = requests.get(urls[idx])
+        layout = bs4.BeautifulSoup(res.text,'lxml')
+
+        wb,sheet,max_row,max_col=open_file(data_path,active=True)
+
+
+        divs =layout.select('.chu17.need_blank')# all number of that day
+        numbers = dict((el,0) for el in range(100))
+        for div in divs:
+            number = int(div.text)
+            numbers[number]+=1
+
+
+        #write datetime
+        sheet.cell(row=max_row+1,column=1).value=day
+
+
+        #write number
+        for idx,number in numbers.items():
+            if number !=0:
+                sheet.cell(row=max_row+1,column=idx+2).value=number
+                sheet.cell(row=max_row+1,column=idx+2).fill=get_color(number)
+
+
+
+        max_row+=1#update to write next part
+
+        wb.save(data_path)
+
+
+def update():# NOTE: just can update new day
+    days , urls=get_list_of_N_day_ago(30)# just check for last 30 days
+    data = convert_data_to_dict(data_path)
+
+    days_to_update=[]
+    urls_to_update=[]
+    for idx,day in enumerate(days):
+        if day not in data.keys():#if the key don't contain any element in days we will crawl it
+            days_to_update.append(day)
+            urls_to_update.append(urls[idx])
+
+    scrawl_day(days_to_update,urls_to_update)
 
 
 def input_data(file_path):
@@ -210,7 +251,7 @@ def get_list_of_N_day_ago(n):
     href='http://ketqua.net/xo-so-mien-bac.php?ngay='
     days=[]
     urls=[]
-    
+
     now=datetime.datetime.now()
     current_date= now.date()
     current_time = now.time()
@@ -236,6 +277,19 @@ def get_list_of_N_day_ago(n):
     return days,urls
 
 
+def get_color(number):
+    if number ==1 :
+        return PatternFill(start_color='2ecc71',end_color='2ecc71',fill_type='solid')#green
+    elif number ==2:
+        return  PatternFill(start_color='2980b9',end_color='2980b9',fill_type='solid')#blue
+    elif number==3:
+        return  PatternFill(start_color='f1c40f',end_color='f1c40f',fill_type='solid')#yellow
+    elif number ==4:
+        return  PatternFill(start_color='e74c3c',end_color='e74c3c',fill_type='solid')#red
+    else:
+        return  PatternFill(start_color='FFFF0000',end_color='FFFFFF',fill_type='solid')#white
+
+
 def date_valid(date):
 
     try:
@@ -243,8 +297,6 @@ def date_valid(date):
     except :
         return False
     return True
-
-
 
 
 def input_digit(content):

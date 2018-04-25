@@ -2,25 +2,36 @@ import scrapy
 import datetime
 import pprint
 import openpyxl
-from openpyxl.styles import Color, PatternFill, Font, Border
 from calendar import Calendar
 from pprint import pprint
 from data_ulis import get_list_of_N_day_ago
+from data_ulis import get_color
+def get_urls(years,months):# NOTE: Don't use anymore
+    start_urls=[]
+    href='http://ketqua.net/xo-so-mien-bac.php?ngay='
+    now=datetime.datetime.now()
+    current_date= now.date()
+    current_time = now.time()
+    today6pm = now.replace(hour=18, minute=30, second=0, microsecond=0)
+    for year in years:
+        for mo in months:
+            days = Calendar().itermonthdates(year,mo)
+            for day in days:
+                if day.month == mo:
 
+                    if day<current_date:
+                        url=href+ day.strftime('%d-%m-%Y')
+                        start_urls.append(url)
+                    elif day==current_date:
+                        if now > today6pm:
+                            url=href+ day.strftime('%d-%m-%Y')
+                            start_urls.append(url)
+                            break
+                        else:
+                            #update date to write initial col
+                            break
 
-
-def get_color(number):
-    if number ==1 :
-        return PatternFill(start_color='2ecc71',end_color='2ecc71',fill_type='solid')#green
-    elif number ==2:
-        return  PatternFill(start_color='2980b9',end_color='2980b9',fill_type='solid')#blue
-    elif number==3:
-        return  PatternFill(start_color='f1c40f',end_color='f1c40f',fill_type='solid')#yellow
-    elif number ==4:
-        return  PatternFill(start_color='e74c3c',end_color='e74c3c',fill_type='solid')#red
-    else:
-        return  PatternFill(start_color='FFFF0000',end_color='FFFFFF',fill_type='solid')#white
-
+    return start_urls
 
 
 class lottery(scrapy.Spider):
