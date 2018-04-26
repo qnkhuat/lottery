@@ -2,3 +2,1034 @@
 2018-04-26 19:06:34,908 INFO Open
 2018-04-26 19:06:48,041 INFO Open
 2018-04-26 19:06:55,331 INFO Wrote new data
+2018-04-26 19:19:01,338 INFO Open
+2018-04-26 20:47:05,741 INFO Scrapy 1.5.0 started (bot: lottery)
+2018-04-26 20:47:05,756 INFO Versions: lxml 4.1.1.0, libxml2 2.9.7, cssselect 1.0.3, parsel 1.3.1, w3lib 1.18.0, Twisted 17.9.0, Python 3.6.4 |Anaconda, Inc.| (default, Dec 21 2017, 15:39:08) - [GCC 4.2.1 Compatible Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Darwin-16.7.0-x86_64-i386-64bit
+2018-04-26 20:47:05,760 INFO Overridden settings: {'BOT_NAME': 'lottery', 'NEWSPIDER_MODULE': 'lottery.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['lottery.spiders']}
+2018-04-26 20:47:05,789 INFO Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2018-04-26 20:47:05,969 INFO Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-04-26 20:47:05,974 INFO Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-04-26 20:47:05,975 INFO Enabled item pipelines:
+[]
+2018-04-26 20:47:05,975 INFO Spider opened
+2018-04-26 20:47:05,990 INFO Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 20:47:05,991 DEBUG Telnet console listening on 127.0.0.1:6023
+2018-04-26 20:47:06,128 DEBUG Crawled (200) <GET http://ketqua.net/robots.txt> (referer: None)
+2018-04-26 20:47:07,091 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-01-2018> (referer: None)
+2018-04-26 20:47:07,438 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-01-2018)
+2018-04-26 20:47:07,750 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-01-2018)
+2018-04-26 20:47:08,048 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-01-2018)
+2018-04-26 20:47:08,357 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-01-2018)
+2018-04-26 20:47:08,642 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-01-2018)
+2018-04-26 20:47:08,943 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-01-2018)
+2018-04-26 20:47:09,249 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-01-2018)
+2018-04-26 20:47:09,587 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-01-2018)
+2018-04-26 20:47:09,970 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-01-2018)
+2018-04-26 20:47:10,365 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=27-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=26-01-2018)
+2018-04-26 20:47:10,882 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=28-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=27-01-2018)
+2018-04-26 20:47:11,225 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=29-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=28-01-2018)
+2018-04-26 20:47:11,559 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=30-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=29-01-2018)
+2018-04-26 20:47:11,895 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=31-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=30-01-2018)
+2018-04-26 20:47:12,497 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=01-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=31-01-2018)
+2018-04-26 20:47:12,932 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=02-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=01-02-2018)
+2018-04-26 20:47:13,583 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=03-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=02-02-2018)
+2018-04-26 20:47:13,933 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=04-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=03-02-2018)
+2018-04-26 20:47:14,404 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=05-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=04-02-2018)
+2018-04-26 20:47:14,755 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=06-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=05-02-2018)
+2018-04-26 20:47:15,291 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=07-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=06-02-2018)
+2018-04-26 20:47:15,704 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=08-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=07-02-2018)
+2018-04-26 20:47:16,033 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=09-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=08-02-2018)
+2018-04-26 20:47:16,448 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=10-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=09-02-2018)
+2018-04-26 20:47:16,883 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=11-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=10-02-2018)
+2018-04-26 20:47:17,255 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=12-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=11-02-2018)
+2018-04-26 20:47:17,595 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=13-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=12-02-2018)
+2018-04-26 20:47:18,222 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=14-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=13-02-2018)
+2018-04-26 20:47:19,259 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=15-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=14-02-2018)
+2018-04-26 20:47:19,469 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=16-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=15-02-2018)
+2018-04-26 20:47:19,767 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=16-02-2018)
+2018-04-26 20:47:20,030 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-02-2018)
+2018-04-26 20:47:20,272 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-02-2018)
+2018-04-26 20:47:20,633 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-02-2018)
+2018-04-26 20:47:21,032 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-02-2018)
+2018-04-26 20:47:21,472 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-02-2018)
+2018-04-26 20:47:21,856 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-02-2018)
+2018-04-26 20:47:22,210 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-02-2018)
+2018-04-26 20:47:22,617 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-02-2018)
+2018-04-26 20:47:22,960 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-02-2018)
+2018-04-26 20:47:23,375 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=27-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=26-02-2018)
+2018-04-26 20:47:23,744 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=28-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=27-02-2018)
+2018-04-26 20:47:24,735 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=01-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=28-02-2018)
+2018-04-26 20:47:25,130 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=02-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=01-03-2018)
+2018-04-26 20:47:25,516 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=03-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=02-03-2018)
+2018-04-26 20:47:25,895 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=04-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=03-03-2018)
+2018-04-26 20:47:26,239 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=05-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=04-03-2018)
+2018-04-26 20:47:26,638 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=06-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=05-03-2018)
+2018-04-26 20:47:27,000 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=07-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=06-03-2018)
+2018-04-26 20:47:27,343 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=08-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=07-03-2018)
+2018-04-26 20:47:27,678 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=09-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=08-03-2018)
+2018-04-26 20:47:28,086 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=10-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=09-03-2018)
+2018-04-26 20:47:28,405 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=11-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=10-03-2018)
+2018-04-26 20:47:28,860 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=12-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=11-03-2018)
+2018-04-26 20:47:29,191 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=13-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=12-03-2018)
+2018-04-26 20:47:29,513 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=14-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=13-03-2018)
+2018-04-26 20:47:29,867 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=15-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=14-03-2018)
+2018-04-26 20:47:30,181 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=16-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=15-03-2018)
+2018-04-26 20:47:30,581 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=16-03-2018)
+2018-04-26 20:47:30,910 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-03-2018)
+2018-04-26 20:47:31,246 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-03-2018)
+2018-04-26 20:47:31,571 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-03-2018)
+2018-04-26 20:47:31,949 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-03-2018)
+2018-04-26 20:47:32,285 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-03-2018)
+2018-04-26 20:47:32,754 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-03-2018)
+2018-04-26 20:47:33,115 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-03-2018)
+2018-04-26 20:47:33,489 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-03-2018)
+2018-04-26 20:47:33,846 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-03-2018)
+2018-04-26 20:47:34,186 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=27-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=26-03-2018)
+2018-04-26 20:47:34,544 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=28-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=27-03-2018)
+2018-04-26 20:47:34,954 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=29-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=28-03-2018)
+2018-04-26 20:47:35,324 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=30-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=29-03-2018)
+2018-04-26 20:47:35,689 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=31-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=30-03-2018)
+2018-04-26 20:47:36,030 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=01-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=31-03-2018)
+2018-04-26 20:47:36,769 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=02-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=01-04-2018)
+2018-04-26 20:47:37,665 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=03-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=02-04-2018)
+2018-04-26 20:47:38,092 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=04-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=03-04-2018)
+2018-04-26 20:47:38,518 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=05-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=04-04-2018)
+2018-04-26 20:47:38,920 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=06-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=05-04-2018)
+2018-04-26 20:47:39,352 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=07-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=06-04-2018)
+2018-04-26 20:47:40,378 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=08-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=07-04-2018)
+2018-04-26 20:47:40,905 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=09-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=08-04-2018)
+2018-04-26 20:47:41,707 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=10-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=09-04-2018)
+2018-04-26 20:47:42,402 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=11-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=10-04-2018)
+2018-04-26 20:47:42,858 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=12-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=11-04-2018)
+2018-04-26 20:47:43,313 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=13-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=12-04-2018)
+2018-04-26 20:47:43,709 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=14-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=13-04-2018)
+2018-04-26 20:47:44,101 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=15-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=14-04-2018)
+2018-04-26 20:47:44,467 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=16-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=15-04-2018)
+2018-04-26 20:47:44,865 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=16-04-2018)
+2018-04-26 20:47:45,254 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-04-2018)
+2018-04-26 20:47:45,634 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-04-2018)
+2018-04-26 20:47:46,045 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-04-2018)
+2018-04-26 20:47:46,444 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-04-2018)
+2018-04-26 20:47:46,866 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-04-2018)
+2018-04-26 20:47:47,500 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-04-2018)
+2018-04-26 20:47:47,854 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-04-2018)
+2018-04-26 20:47:48,203 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-04-2018)
+2018-04-26 20:47:48,739 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-04-2018)
+2018-04-26 20:47:49,044 ERROR Spider error processing <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-04-2018)
+Traceback (most recent call last):
+  File "/anaconda3/envs/crawl/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/anaconda3/envs/crawl/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/anaconda3/envs/crawl/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/anaconda3/envs/crawl/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/anaconda3/envs/crawl/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/qnkhuat/Desktop/lottery/lottery/spiders/lottery.py", line 114, in parse
+    date= self.start_urls[self.current].split('=')
+IndexError: list index out of range
+2018-04-26 20:47:49,049 INFO Closing spider (finished)
+2018-04-26 20:47:49,049 INFO Dumping Scrapy stats:
+{'downloader/request_bytes': 44282,
+ 'downloader/request_count': 101,
+ 'downloader/request_method_count/GET': 101,
+ 'downloader/response_bytes': 1181330,
+ 'downloader/response_count': 101,
+ 'downloader/response_status_count/200': 101,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 4, 26, 13, 47, 49, 49291),
+ 'log_count/DEBUG': 102,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'memusage/max': 63410176,
+ 'memusage/startup': 63410176,
+ 'request_depth_max': 99,
+ 'response_received_count': 101,
+ 'scheduler/dequeued': 100,
+ 'scheduler/dequeued/memory': 100,
+ 'scheduler/enqueued': 100,
+ 'scheduler/enqueued/memory': 100,
+ 'spider_exceptions/IndexError': 1,
+ 'start_time': datetime.datetime(2018, 4, 26, 13, 47, 5, 990257)}
+2018-04-26 20:47:49,049 INFO Spider closed (finished)
+2018-04-26 21:08:30,405 INFO Scrapy 1.5.0 started (bot: lottery)
+2018-04-26 21:08:30,424 INFO Versions: lxml 4.1.1.0, libxml2 2.9.7, cssselect 1.0.3, parsel 1.3.1, w3lib 1.18.0, Twisted 17.9.0, Python 3.6.4 |Anaconda, Inc.| (default, Dec 21 2017, 15:39:08) - [GCC 4.2.1 Compatible Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Darwin-16.7.0-x86_64-i386-64bit
+2018-04-26 21:08:30,428 INFO Overridden settings: {'BOT_NAME': 'lottery', 'NEWSPIDER_MODULE': 'lottery.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['lottery.spiders']}
+2018-04-26 21:08:30,479 INFO Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2018-04-26 21:08:30,549 INFO Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-04-26 21:08:30,554 INFO Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-04-26 21:08:30,555 INFO Enabled item pipelines:
+[]
+2018-04-26 21:08:30,555 INFO Spider opened
+2018-04-26 21:08:30,568 INFO Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 21:08:30,569 DEBUG Telnet console listening on 127.0.0.1:6023
+2018-04-26 21:08:30,707 DEBUG Crawled (200) <GET http://ketqua.net/robots.txt> (referer: None)
+2018-04-26 21:08:30,822 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-01-2018> (referer: None)
+2018-04-26 21:08:31,041 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-01-2018)
+2018-04-26 21:08:31,243 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-01-2018)
+2018-04-26 21:08:31,497 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-01-2018)
+2018-04-26 21:08:32,203 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-01-2018)
+2018-04-26 21:08:32,446 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-01-2018)
+2018-04-26 21:08:32,657 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-01-2018)
+2018-04-26 21:08:32,877 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-01-2018)
+2018-04-26 21:08:33,109 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-01-2018)
+2018-04-26 21:08:33,433 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-01-2018)
+2018-04-26 21:08:33,659 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=27-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=26-01-2018)
+2018-04-26 21:08:33,935 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=28-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=27-01-2018)
+2018-04-26 21:08:34,196 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=29-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=28-01-2018)
+2018-04-26 21:08:34,432 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=30-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=29-01-2018)
+2018-04-26 21:08:34,664 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=31-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=30-01-2018)
+2018-04-26 21:08:34,911 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=01-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=31-01-2018)
+2018-04-26 21:08:35,144 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=02-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=01-02-2018)
+2018-04-26 21:08:35,374 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=03-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=02-02-2018)
+2018-04-26 21:08:35,669 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=04-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=03-02-2018)
+2018-04-26 21:08:35,906 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=05-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=04-02-2018)
+2018-04-26 21:08:36,163 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=06-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=05-02-2018)
+2018-04-26 21:08:36,425 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=07-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=06-02-2018)
+2018-04-26 21:08:36,681 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=08-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=07-02-2018)
+2018-04-26 21:08:36,923 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=09-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=08-02-2018)
+2018-04-26 21:08:37,168 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=10-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=09-02-2018)
+2018-04-26 21:08:37,465 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=11-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=10-02-2018)
+2018-04-26 21:08:37,723 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=12-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=11-02-2018)
+2018-04-26 21:08:37,949 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=13-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=12-02-2018)
+2018-04-26 21:08:37,992 INFO Received SIG_UNBLOCK, shutting down gracefully. Send again to force 
+2018-04-26 21:08:37,992 INFO Closing spider (shutdown)
+2018-04-26 21:08:38,101 INFO Dumping Scrapy stats:
+{'downloader/request_bytes': 12458,
+ 'downloader/request_count': 29,
+ 'downloader/request_method_count/GET': 29,
+ 'downloader/response_bytes': 333891,
+ 'downloader/response_count': 29,
+ 'downloader/response_status_count/200': 29,
+ 'finish_reason': 'shutdown',
+ 'finish_time': datetime.datetime(2018, 4, 26, 14, 8, 38, 100864),
+ 'log_count/DEBUG': 30,
+ 'log_count/INFO': 8,
+ 'memusage/max': 62554112,
+ 'memusage/startup': 62554112,
+ 'request_depth_max': 28,
+ 'response_received_count': 29,
+ 'scheduler/dequeued': 28,
+ 'scheduler/dequeued/memory': 28,
+ 'scheduler/enqueued': 29,
+ 'scheduler/enqueued/memory': 29,
+ 'start_time': datetime.datetime(2018, 4, 26, 14, 8, 30, 568277)}
+2018-04-26 21:08:38,101 INFO Spider closed (shutdown)
+2018-04-26 21:08:42,061 INFO Scrapy 1.5.0 started (bot: lottery)
+2018-04-26 21:08:42,076 INFO Versions: lxml 4.1.1.0, libxml2 2.9.7, cssselect 1.0.3, parsel 1.3.1, w3lib 1.18.0, Twisted 17.9.0, Python 3.6.4 |Anaconda, Inc.| (default, Dec 21 2017, 15:39:08) - [GCC 4.2.1 Compatible Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Darwin-16.7.0-x86_64-i386-64bit
+2018-04-26 21:08:42,080 INFO Overridden settings: {'BOT_NAME': 'lottery', 'NEWSPIDER_MODULE': 'lottery.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['lottery.spiders']}
+2018-04-26 21:08:42,109 INFO Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2018-04-26 21:08:42,158 INFO Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-04-26 21:08:42,163 INFO Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-04-26 21:08:42,164 INFO Enabled item pipelines:
+[]
+2018-04-26 21:08:42,164 INFO Spider opened
+2018-04-26 21:08:42,169 INFO Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 21:08:42,170 DEBUG Telnet console listening on 127.0.0.1:6023
+2018-04-26 21:08:42,296 DEBUG Crawled (200) <GET http://ketqua.net/robots.txt> (referer: None)
+2018-04-26 21:08:42,410 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-01-2018> (referer: None)
+2018-04-26 21:08:42,616 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-01-2018)
+2018-04-26 21:08:42,891 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-01-2018)
+2018-04-26 21:08:43,218 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-01-2018)
+2018-04-26 21:08:43,450 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-01-2018)
+2018-04-26 21:08:43,703 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-01-2018)
+2018-04-26 21:08:43,954 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-01-2018)
+2018-04-26 21:08:44,171 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-01-2018)
+2018-04-26 21:08:44,416 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-01-2018)
+2018-04-26 21:08:44,640 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-01-2018)
+2018-04-26 21:08:44,861 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=27-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=26-01-2018)
+2018-04-26 21:08:45,093 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=28-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=27-01-2018)
+2018-04-26 21:08:45,344 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=29-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=28-01-2018)
+2018-04-26 21:08:45,582 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=30-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=29-01-2018)
+2018-04-26 21:08:45,813 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=31-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=30-01-2018)
+2018-04-26 21:08:46,043 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=01-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=31-01-2018)
+2018-04-26 21:08:46,314 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=02-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=01-02-2018)
+2018-04-26 21:08:46,661 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=03-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=02-02-2018)
+2018-04-26 21:08:46,898 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=04-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=03-02-2018)
+2018-04-26 21:08:47,213 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=05-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=04-02-2018)
+2018-04-26 21:08:47,541 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=06-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=05-02-2018)
+2018-04-26 21:08:47,798 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=07-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=06-02-2018)
+2018-04-26 21:08:48,060 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=08-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=07-02-2018)
+2018-04-26 21:08:48,379 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=09-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=08-02-2018)
+2018-04-26 21:08:48,958 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=10-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=09-02-2018)
+2018-04-26 21:08:49,194 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=11-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=10-02-2018)
+2018-04-26 21:08:49,474 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=12-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=11-02-2018)
+2018-04-26 21:08:49,848 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=13-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=12-02-2018)
+2018-04-26 21:08:50,092 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=14-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=13-02-2018)
+2018-04-26 21:08:50,329 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=15-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=14-02-2018)
+2018-04-26 21:08:50,798 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=16-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=15-02-2018)
+2018-04-26 21:08:51,001 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=16-02-2018)
+2018-04-26 21:08:51,230 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-02-2018)
+2018-04-26 21:08:51,735 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-02-2018)
+2018-04-26 21:08:52,053 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-02-2018)
+2018-04-26 21:08:52,322 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-02-2018)
+2018-04-26 21:08:52,621 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-02-2018)
+2018-04-26 21:08:52,883 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-02-2018)
+2018-04-26 21:08:53,131 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-02-2018)
+2018-04-26 21:08:53,427 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-02-2018)
+2018-04-26 21:08:53,685 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-02-2018)
+2018-04-26 21:08:54,026 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=27-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=26-02-2018)
+2018-04-26 21:08:54,284 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=28-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=27-02-2018)
+2018-04-26 21:08:54,667 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=01-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=28-02-2018)
+2018-04-26 21:08:54,948 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=02-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=01-03-2018)
+2018-04-26 21:08:55,207 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=03-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=02-03-2018)
+2018-04-26 21:08:55,453 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=04-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=03-03-2018)
+2018-04-26 21:08:55,716 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=05-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=04-03-2018)
+2018-04-26 21:08:55,973 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=06-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=05-03-2018)
+2018-04-26 21:08:56,299 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=07-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=06-03-2018)
+2018-04-26 21:08:56,760 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=08-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=07-03-2018)
+2018-04-26 21:08:57,797 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=09-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=08-03-2018)
+2018-04-26 21:08:58,155 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=10-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=09-03-2018)
+2018-04-26 21:08:58,441 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=11-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=10-03-2018)
+2018-04-26 21:08:58,741 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=12-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=11-03-2018)
+2018-04-26 21:08:59,110 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=13-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=12-03-2018)
+2018-04-26 21:08:59,394 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=14-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=13-03-2018)
+2018-04-26 21:08:59,676 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=15-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=14-03-2018)
+2018-04-26 21:09:00,008 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=16-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=15-03-2018)
+2018-04-26 21:09:00,427 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=16-03-2018)
+2018-04-26 21:09:00,946 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-03-2018)
+2018-04-26 21:09:01,254 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-03-2018)
+2018-04-26 21:09:01,541 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-03-2018)
+2018-04-26 21:09:01,808 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-03-2018)
+2018-04-26 21:09:02,087 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-03-2018)
+2018-04-26 21:09:02,351 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-03-2018)
+2018-04-26 21:09:02,614 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-03-2018)
+2018-04-26 21:09:02,889 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-03-2018)
+2018-04-26 21:09:03,448 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-03-2018)
+2018-04-26 21:09:03,721 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=27-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=26-03-2018)
+2018-04-26 21:09:04,022 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=28-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=27-03-2018)
+2018-04-26 21:09:04,304 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=29-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=28-03-2018)
+2018-04-26 21:09:04,586 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=30-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=29-03-2018)
+2018-04-26 21:09:04,908 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=31-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=30-03-2018)
+2018-04-26 21:09:05,184 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=01-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=31-03-2018)
+2018-04-26 21:09:05,450 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=02-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=01-04-2018)
+2018-04-26 21:09:05,749 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=03-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=02-04-2018)
+2018-04-26 21:09:06,030 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=04-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=03-04-2018)
+2018-04-26 21:09:06,344 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=05-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=04-04-2018)
+2018-04-26 21:09:06,737 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=06-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=05-04-2018)
+2018-04-26 21:09:07,048 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=07-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=06-04-2018)
+2018-04-26 21:09:07,406 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=08-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=07-04-2018)
+2018-04-26 21:09:07,761 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=09-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=08-04-2018)
+2018-04-26 21:09:08,125 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=10-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=09-04-2018)
+2018-04-26 21:09:08,456 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=11-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=10-04-2018)
+2018-04-26 21:09:08,734 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=12-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=11-04-2018)
+2018-04-26 21:09:09,010 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=13-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=12-04-2018)
+2018-04-26 21:09:09,318 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=14-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=13-04-2018)
+2018-04-26 21:09:09,946 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=15-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=14-04-2018)
+2018-04-26 21:09:10,267 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=16-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=15-04-2018)
+2018-04-26 21:09:10,574 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=16-04-2018)
+2018-04-26 21:09:10,867 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-04-2018)
+2018-04-26 21:09:11,150 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-04-2018)
+2018-04-26 21:09:11,470 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-04-2018)
+2018-04-26 21:09:11,789 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-04-2018)
+2018-04-26 21:09:12,547 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-04-2018)
+2018-04-26 21:09:12,863 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-04-2018)
+2018-04-26 21:09:13,208 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-04-2018)
+2018-04-26 21:09:13,856 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-04-2018)
+2018-04-26 21:09:14,198 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-04-2018)
+2018-04-26 21:09:14,389 ERROR Spider error processing <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-04-2018)
+Traceback (most recent call last):
+  File "/anaconda3/envs/crawl/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/anaconda3/envs/crawl/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/anaconda3/envs/crawl/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/anaconda3/envs/crawl/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/anaconda3/envs/crawl/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/qnkhuat/Desktop/lottery/lottery/spiders/lottery.py", line 114, in parse
+    date= self.start_urls[self.current].split('=')
+IndexError: list index out of range
+2018-04-26 21:09:14,397 INFO Closing spider (finished)
+2018-04-26 21:09:14,398 INFO Dumping Scrapy stats:
+{'downloader/request_bytes': 44282,
+ 'downloader/request_count': 101,
+ 'downloader/request_method_count/GET': 101,
+ 'downloader/response_bytes': 1182561,
+ 'downloader/response_count': 101,
+ 'downloader/response_status_count/200': 101,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 4, 26, 14, 9, 14, 397630),
+ 'log_count/DEBUG': 102,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 7,
+ 'memusage/max': 62955520,
+ 'memusage/startup': 62955520,
+ 'request_depth_max': 99,
+ 'response_received_count': 101,
+ 'scheduler/dequeued': 100,
+ 'scheduler/dequeued/memory': 100,
+ 'scheduler/enqueued': 100,
+ 'scheduler/enqueued/memory': 100,
+ 'spider_exceptions/IndexError': 1,
+ 'start_time': datetime.datetime(2018, 4, 26, 14, 8, 42, 169020)}
+2018-04-26 21:09:14,398 INFO Spider closed (finished)
+2018-04-26 21:13:47,084 INFO Scrawling data of 26-04-2018
+2018-04-26 21:14:53,009 INFO Scrawling data of 28-03-2018
+2018-04-26 21:14:53,402 INFO Scrawling data of 29-03-2018
+2018-04-26 21:14:53,740 INFO Scrawling data of 30-03-2018
+2018-04-26 21:14:54,142 INFO Scrawling data of 31-03-2018
+2018-04-26 21:14:54,494 INFO Scrawling data of 01-04-2018
+2018-04-26 21:14:54,845 INFO Scrawling data of 02-04-2018
+2018-04-26 21:14:55,143 INFO Scrawling data of 03-04-2018
+2018-04-26 21:14:55,467 INFO Scrawling data of 04-04-2018
+2018-04-26 21:14:55,835 INFO Scrawling data of 05-04-2018
+2018-04-26 21:14:56,193 INFO Scrawling data of 06-04-2018
+2018-04-26 21:14:56,563 INFO Scrawling data of 07-04-2018
+2018-04-26 21:14:56,916 INFO Scrawling data of 08-04-2018
+2018-04-26 21:14:57,262 INFO Scrawling data of 09-04-2018
+2018-04-26 21:14:57,613 INFO Scrawling data of 10-04-2018
+2018-04-26 21:14:57,951 INFO Scrawling data of 11-04-2018
+2018-04-26 21:14:58,328 INFO Scrawling data of 12-04-2018
+2018-04-26 21:14:58,632 INFO Scrawling data of 13-04-2018
+2018-04-26 21:14:58,978 INFO Scrawling data of 14-04-2018
+2018-04-26 21:14:59,342 INFO Scrawling data of 15-04-2018
+2018-04-26 21:14:59,748 INFO Scrawling data of 16-04-2018
+2018-04-26 21:15:00,079 INFO Scrawling data of 17-04-2018
+2018-04-26 21:15:00,531 INFO Scrawling data of 18-04-2018
+2018-04-26 21:15:00,886 INFO Scrawling data of 19-04-2018
+2018-04-26 21:15:01,237 INFO Scrawling data of 20-04-2018
+2018-04-26 21:15:01,575 INFO Scrawling data of 21-04-2018
+2018-04-26 21:15:02,264 INFO Scrawling data of 22-04-2018
+2018-04-26 21:15:02,591 INFO Scrawling data of 23-04-2018
+2018-04-26 21:15:02,934 INFO Scrawling data of 24-04-2018
+2018-04-26 21:15:03,328 INFO Scrawling data of 25-04-2018
+2018-04-26 21:15:03,629 INFO Scrawling data of 26-04-2018
+2018-04-26 21:15:04,030 INFO Scrawling data of 26-04-2018
+2018-04-26 21:15:22,881 INFO Scrawling data of 28-03-2018
+2018-04-26 21:15:23,556 INFO Scrawling data of 29-03-2018
+2018-04-26 21:15:24,227 INFO Scrawling data of 30-03-2018
+2018-04-26 21:15:25,572 INFO Scrawling data of 31-03-2018
+2018-04-26 21:15:26,122 INFO Scrawling data of 01-04-2018
+2018-04-26 21:15:27,071 INFO Scrawling data of 02-04-2018
+2018-04-26 21:19:26,196 INFO Scrapy 1.5.0 started (bot: lottery)
+2018-04-26 21:19:26,212 INFO Versions: lxml 4.1.1.0, libxml2 2.9.7, cssselect 1.0.3, parsel 1.3.1, w3lib 1.18.0, Twisted 17.9.0, Python 3.6.4 |Anaconda, Inc.| (default, Dec 21 2017, 15:39:08) - [GCC 4.2.1 Compatible Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Darwin-16.7.0-x86_64-i386-64bit
+2018-04-26 21:19:26,216 INFO Overridden settings: {'BOT_NAME': 'lottery', 'NEWSPIDER_MODULE': 'lottery.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['lottery.spiders']}
+2018-04-26 21:19:26,265 INFO Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2018-04-26 21:19:26,333 INFO Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-04-26 21:19:26,338 INFO Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-04-26 21:19:26,339 INFO Enabled item pipelines:
+[]
+2018-04-26 21:19:26,339 INFO Spider opened
+2018-04-26 21:19:26,350 INFO Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 21:19:26,352 DEBUG Telnet console listening on 127.0.0.1:6023
+2018-04-26 21:19:29,704 DEBUG Crawled (200) <GET http://ketqua.net/robots.txt> (referer: None)
+2018-04-26 21:19:29,968 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-01-2018> (referer: None)
+2018-04-26 21:19:32,563 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-01-2018)
+2018-04-26 21:19:33,378 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-01-2018)
+2018-04-26 21:19:34,144 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-01-2018)
+2018-04-26 21:19:36,781 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-01-2018)
+2018-04-26 21:19:37,741 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-01-2018)
+2018-04-26 21:19:38,588 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-01-2018)
+2018-04-26 21:19:39,095 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-01-2018)
+2018-04-26 21:19:45,696 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-01-2018)
+2018-04-26 21:19:46,329 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-01-2018)
+2018-04-26 21:19:46,571 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=27-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=26-01-2018)
+2018-04-26 21:19:47,102 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=28-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=27-01-2018)
+2018-04-26 21:19:47,455 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=29-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=28-01-2018)
+2018-04-26 21:19:47,785 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=30-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=29-01-2018)
+2018-04-26 21:19:48,103 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=31-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=30-01-2018)
+2018-04-26 21:19:48,385 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=01-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=31-01-2018)
+2018-04-26 21:19:48,890 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=02-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=01-02-2018)
+2018-04-26 21:19:49,160 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=03-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=02-02-2018)
+2018-04-26 21:19:49,418 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=04-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=03-02-2018)
+2018-04-26 21:19:49,718 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=05-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=04-02-2018)
+2018-04-26 21:19:49,981 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=06-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=05-02-2018)
+2018-04-26 21:19:50,323 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=07-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=06-02-2018)
+2018-04-26 21:19:51,249 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=08-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=07-02-2018)
+2018-04-26 21:19:51,786 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=09-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=08-02-2018)
+2018-04-26 21:19:52,762 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=10-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=09-02-2018)
+2018-04-26 21:19:53,125 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=11-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=10-02-2018)
+2018-04-26 21:19:54,258 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=12-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=11-02-2018)
+2018-04-26 21:20:03,822 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=13-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=12-02-2018)
+2018-04-26 21:20:04,284 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=14-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=13-02-2018)
+2018-04-26 21:20:04,688 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=15-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=14-02-2018)
+2018-04-26 21:20:05,051 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=16-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=15-02-2018)
+2018-04-26 21:20:05,415 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=16-02-2018)
+2018-04-26 21:20:05,763 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-02-2018)
+2018-04-26 21:20:06,112 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-02-2018)
+2018-04-26 21:20:06,518 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-02-2018)
+2018-04-26 21:20:06,946 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-02-2018)
+2018-04-26 21:20:07,305 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-02-2018)
+2018-04-26 21:20:07,619 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-02-2018)
+2018-04-26 21:20:08,025 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-02-2018)
+2018-04-26 21:20:08,443 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-02-2018)
+2018-04-26 21:20:08,796 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-02-2018)
+2018-04-26 21:20:09,154 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=27-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=26-02-2018)
+2018-04-26 21:20:09,531 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=28-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=27-02-2018)
+2018-04-26 21:20:09,851 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=01-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=28-02-2018)
+2018-04-26 21:20:10,169 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=02-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=01-03-2018)
+2018-04-26 21:20:10,648 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=03-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=02-03-2018)
+2018-04-26 21:20:10,951 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=04-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=03-03-2018)
+2018-04-26 21:20:11,260 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=05-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=04-03-2018)
+2018-04-26 21:20:11,573 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=06-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=05-03-2018)
+2018-04-26 21:20:12,066 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=07-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=06-03-2018)
+2018-04-26 21:20:12,421 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=08-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=07-03-2018)
+2018-04-26 21:20:12,733 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=09-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=08-03-2018)
+2018-04-26 21:20:13,140 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=10-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=09-03-2018)
+2018-04-26 21:20:13,497 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=11-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=10-03-2018)
+2018-04-26 21:20:13,959 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=12-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=11-03-2018)
+2018-04-26 21:20:14,330 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=13-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=12-03-2018)
+2018-04-26 21:20:14,681 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=14-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=13-03-2018)
+2018-04-26 21:20:15,036 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=15-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=14-03-2018)
+2018-04-26 21:20:15,494 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=16-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=15-03-2018)
+2018-04-26 21:20:15,841 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=16-03-2018)
+2018-04-26 21:20:16,165 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-03-2018)
+2018-04-26 21:20:16,453 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-03-2018)
+2018-04-26 21:20:16,779 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-03-2018)
+2018-04-26 21:20:17,161 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-03-2018)
+2018-04-26 21:20:17,507 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-03-2018)
+2018-04-26 21:20:17,821 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-03-2018)
+2018-04-26 21:20:18,635 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-03-2018)
+2018-04-26 21:20:18,978 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-03-2018)
+2018-04-26 21:20:19,353 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-03-2018)
+2018-04-26 21:20:19,716 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=27-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=26-03-2018)
+2018-04-26 21:20:20,070 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=28-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=27-03-2018)
+2018-04-26 21:20:20,415 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=29-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=28-03-2018)
+2018-04-26 21:20:20,723 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=30-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=29-03-2018)
+2018-04-26 21:20:21,122 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=31-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=30-03-2018)
+2018-04-26 21:20:21,679 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=01-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=31-03-2018)
+2018-04-26 21:20:22,290 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=02-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=01-04-2018)
+2018-04-26 21:20:23,040 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=03-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=02-04-2018)
+2018-04-26 21:20:23,617 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=04-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=03-04-2018)
+2018-04-26 21:20:24,171 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=05-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=04-04-2018)
+2018-04-26 21:20:24,775 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=06-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=05-04-2018)
+2018-04-26 21:20:25,146 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=07-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=06-04-2018)
+2018-04-26 21:20:25,518 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=08-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=07-04-2018)
+2018-04-26 21:20:25,836 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=09-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=08-04-2018)
+2018-04-26 21:20:26,139 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=10-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=09-04-2018)
+2018-04-26 21:20:26,369 INFO Crawled 85 pages (at 85 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 21:20:26,580 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=11-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=10-04-2018)
+2018-04-26 21:20:26,911 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=12-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=11-04-2018)
+2018-04-26 21:20:27,567 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=13-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=12-04-2018)
+2018-04-26 21:20:27,872 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=14-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=13-04-2018)
+2018-04-26 21:20:28,196 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=15-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=14-04-2018)
+2018-04-26 21:20:28,614 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=16-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=15-04-2018)
+2018-04-26 21:20:28,947 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=16-04-2018)
+2018-04-26 21:20:29,377 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-04-2018)
+2018-04-26 21:20:29,930 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-04-2018)
+2018-04-26 21:20:30,396 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-04-2018)
+2018-04-26 21:20:30,755 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-04-2018)
+2018-04-26 21:20:31,135 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-04-2018)
+2018-04-26 21:20:36,343 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-04-2018)
+2018-04-26 21:20:36,902 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-04-2018)
+2018-04-26 21:20:37,316 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-04-2018)
+2018-04-26 21:20:38,181 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-04-2018)
+2018-04-26 21:20:38,381 ERROR Spider error processing <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-04-2018)
+Traceback (most recent call last):
+  File "/anaconda3/envs/crawl/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/anaconda3/envs/crawl/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/anaconda3/envs/crawl/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/anaconda3/envs/crawl/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/anaconda3/envs/crawl/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/qnkhuat/Desktop/lottery/lottery/spiders/lottery.py", line 114, in parse
+    date= self.start_urls[self.current].split('=')
+IndexError: list index out of range
+2018-04-26 21:20:38,387 INFO Closing spider (finished)
+2018-04-26 21:20:38,387 INFO Dumping Scrapy stats:
+{'downloader/request_bytes': 44282,
+ 'downloader/request_count': 101,
+ 'downloader/request_method_count/GET': 101,
+ 'downloader/response_bytes': 1180763,
+ 'downloader/response_count': 101,
+ 'downloader/response_status_count/200': 101,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 4, 26, 14, 20, 38, 387571),
+ 'log_count/DEBUG': 102,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 8,
+ 'memusage/max': 85725184,
+ 'memusage/startup': 62554112,
+ 'request_depth_max': 99,
+ 'response_received_count': 101,
+ 'scheduler/dequeued': 100,
+ 'scheduler/dequeued/memory': 100,
+ 'scheduler/enqueued': 100,
+ 'scheduler/enqueued/memory': 100,
+ 'spider_exceptions/IndexError': 1,
+ 'start_time': datetime.datetime(2018, 4, 26, 14, 19, 26, 350737)}
+2018-04-26 21:20:38,388 INFO Spider closed (finished)
+2018-04-26 21:27:06,711 INFO Scrawling data of 26-04-2018
+2018-04-26 21:27:33,085 INFO Scrawling data of 26-04-2018
+2018-04-26 21:28:08,732 INFO Scrawling data of 26-04-2018
+2018-04-26 21:29:09,043 INFO Scrawling data of 26-04-2018
+2018-04-26 21:29:09,455 INFO Scrawling data of 26-04-2018
+2018-04-26 21:32:31,310 INFO Scrawling data of 26-04-2018
+2018-04-26 21:32:31,571 INFO Scrawling data of 26-04-2018
+2018-04-26 21:32:31,838 INFO Scrawling data of 26-04-2018
+2018-04-26 21:32:48,618 INFO Scrawling data of 26-04-2018
+2018-04-26 21:32:48,911 INFO Scrawling data of 26-04-2018
+2018-04-26 21:32:49,211 INFO Scrawling data of 26-04-2018
+2018-04-26 21:33:48,626 INFO Scrawling data of 25-04-2018
+2018-04-26 21:33:48,887 INFO Scrawling data of 25-04-2018
+2018-04-26 21:33:49,146 INFO Scrawling data of 25-04-2018
+2018-04-26 21:33:49,794 INFO Scrawling data of 26-04-2018
+2018-04-26 21:33:50,054 INFO Scrawling data of 26-04-2018
+2018-04-26 21:33:50,278 INFO Scrawling data of 26-04-2018
+2018-04-26 21:35:02,100 INFO Scrapy 1.5.0 started (bot: lottery)
+2018-04-26 21:35:02,117 INFO Versions: lxml 4.1.1.0, libxml2 2.9.7, cssselect 1.0.3, parsel 1.3.1, w3lib 1.18.0, Twisted 17.9.0, Python 3.6.4 |Anaconda, Inc.| (default, Dec 21 2017, 15:39:08) - [GCC 4.2.1 Compatible Clang 4.0.1 (tags/RELEASE_401/final)], pyOpenSSL 17.5.0 (OpenSSL 1.1.0g  2 Nov 2017), cryptography 2.1.4, Platform Darwin-16.7.0-x86_64-i386-64bit
+2018-04-26 21:35:02,120 INFO Overridden settings: {'BOT_NAME': 'lottery', 'NEWSPIDER_MODULE': 'lottery.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['lottery.spiders']}
+2018-04-26 21:35:02,165 INFO Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2018-04-26 21:35:02,329 INFO Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-04-26 21:35:02,333 INFO Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-04-26 21:35:02,334 INFO Enabled item pipelines:
+[]
+2018-04-26 21:35:02,334 INFO Spider opened
+2018-04-26 21:35:02,347 INFO Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 21:35:02,348 DEBUG Telnet console listening on 127.0.0.1:6023
+2018-04-26 21:35:03,717 DEBUG Crawled (200) <GET http://ketqua.net/robots.txt> (referer: None)
+2018-04-26 21:35:03,835 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=01-07-2017> (referer: None)
+2018-04-26 21:35:04,304 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=02-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=01-07-2017)
+2018-04-26 21:35:04,706 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=03-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=02-07-2017)
+2018-04-26 21:35:05,011 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=04-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=03-07-2017)
+2018-04-26 21:35:05,333 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=05-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=04-07-2017)
+2018-04-26 21:35:05,654 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=06-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=05-07-2017)
+2018-04-26 21:35:05,998 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=07-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=06-07-2017)
+2018-04-26 21:35:06,891 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=08-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=07-07-2017)
+2018-04-26 21:35:07,323 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=09-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=08-07-2017)
+2018-04-26 21:35:07,740 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=10-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=09-07-2017)
+2018-04-26 21:35:08,093 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=11-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=10-07-2017)
+2018-04-26 21:35:08,544 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=12-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=11-07-2017)
+2018-04-26 21:35:08,888 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=13-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=12-07-2017)
+2018-04-26 21:35:09,251 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=14-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=13-07-2017)
+2018-04-26 21:35:09,675 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=15-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=14-07-2017)
+2018-04-26 21:35:10,670 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=16-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=15-07-2017)
+2018-04-26 21:35:14,020 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=16-07-2017)
+2018-04-26 21:35:15,308 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-07-2017)
+2018-04-26 21:35:15,889 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-07-2017)
+2018-04-26 21:35:16,273 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-07-2017)
+2018-04-26 21:35:16,671 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-07-2017)
+2018-04-26 21:35:17,064 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-07-2017)
+2018-04-26 21:35:17,446 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-07-2017)
+2018-04-26 21:35:17,802 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-07-2017)
+2018-04-26 21:35:18,203 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-07-2017)
+2018-04-26 21:35:18,538 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-07-2017)
+2018-04-26 21:35:18,896 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=27-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=26-07-2017)
+2018-04-26 21:35:19,889 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=28-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=27-07-2017)
+2018-04-26 21:35:20,387 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=29-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=28-07-2017)
+2018-04-26 21:35:20,736 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=30-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=29-07-2017)
+2018-04-26 21:35:21,074 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=31-07-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=30-07-2017)
+2018-04-26 21:35:21,490 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=01-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=31-07-2017)
+2018-04-26 21:35:21,868 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=02-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=01-08-2017)
+2018-04-26 21:35:22,229 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=03-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=02-08-2017)
+2018-04-26 21:35:22,597 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=04-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=03-08-2017)
+2018-04-26 21:35:22,999 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=05-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=04-08-2017)
+2018-04-26 21:35:23,736 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=06-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=05-08-2017)
+2018-04-26 21:35:24,091 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=07-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=06-08-2017)
+2018-04-26 21:35:24,466 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=08-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=07-08-2017)
+2018-04-26 21:35:24,800 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=09-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=08-08-2017)
+2018-04-26 21:35:25,140 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=10-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=09-08-2017)
+2018-04-26 21:35:25,578 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=11-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=10-08-2017)
+2018-04-26 21:35:26,072 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=12-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=11-08-2017)
+2018-04-26 21:35:26,438 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=13-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=12-08-2017)
+2018-04-26 21:35:27,126 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=14-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=13-08-2017)
+2018-04-26 21:35:27,516 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=15-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=14-08-2017)
+2018-04-26 21:35:28,665 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=16-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=15-08-2017)
+2018-04-26 21:35:29,564 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=16-08-2017)
+2018-04-26 21:35:29,949 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-08-2017)
+2018-04-26 21:35:30,372 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-08-2017)
+2018-04-26 21:35:30,770 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-08-2017)
+2018-04-26 21:35:31,226 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-08-2017)
+2018-04-26 21:35:31,608 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-08-2017)
+2018-04-26 21:35:31,979 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-08-2017)
+2018-04-26 21:35:32,333 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-08-2017)
+2018-04-26 21:35:32,685 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-08-2017)
+2018-04-26 21:35:33,074 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-08-2017)
+2018-04-26 21:35:33,427 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=27-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=26-08-2017)
+2018-04-26 21:35:33,781 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=28-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=27-08-2017)
+2018-04-26 21:35:34,161 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=29-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=28-08-2017)
+2018-04-26 21:35:34,588 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=30-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=29-08-2017)
+2018-04-26 21:35:35,002 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=31-08-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=30-08-2017)
+2018-04-26 21:35:35,417 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=01-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=31-08-2017)
+2018-04-26 21:35:35,814 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=02-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=01-09-2017)
+2018-04-26 21:35:36,206 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=03-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=02-09-2017)
+2018-04-26 21:35:36,656 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=04-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=03-09-2017)
+2018-04-26 21:35:37,051 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=05-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=04-09-2017)
+2018-04-26 21:35:37,517 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=06-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=05-09-2017)
+2018-04-26 21:35:37,885 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=07-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=06-09-2017)
+2018-04-26 21:35:38,237 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=08-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=07-09-2017)
+2018-04-26 21:35:38,591 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=09-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=08-09-2017)
+2018-04-26 21:35:38,986 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=10-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=09-09-2017)
+2018-04-26 21:35:39,360 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=11-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=10-09-2017)
+2018-04-26 21:35:39,795 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=12-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=11-09-2017)
+2018-04-26 21:35:40,190 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=13-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=12-09-2017)
+2018-04-26 21:35:40,610 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=14-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=13-09-2017)
+2018-04-26 21:35:40,977 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=15-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=14-09-2017)
+2018-04-26 21:35:41,349 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=16-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=15-09-2017)
+2018-04-26 21:35:41,814 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=16-09-2017)
+2018-04-26 21:35:42,173 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-09-2017)
+2018-04-26 21:35:42,563 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-09-2017)
+2018-04-26 21:35:42,943 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-09-2017)
+2018-04-26 21:35:43,330 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-09-2017)
+2018-04-26 21:35:43,713 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-09-2017)
+2018-04-26 21:35:44,077 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-09-2017)
+2018-04-26 21:35:44,458 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-09-2017)
+2018-04-26 21:35:44,824 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-09-2017)
+2018-04-26 21:35:45,301 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-09-2017)
+2018-04-26 21:35:45,680 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=27-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=26-09-2017)
+2018-04-26 21:35:46,096 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=28-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=27-09-2017)
+2018-04-26 21:35:46,483 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=29-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=28-09-2017)
+2018-04-26 21:35:47,031 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=30-09-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=29-09-2017)
+2018-04-26 21:35:47,539 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=01-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=30-09-2017)
+2018-04-26 21:35:48,062 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=02-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=01-10-2017)
+2018-04-26 21:35:48,661 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=03-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=02-10-2017)
+2018-04-26 21:35:49,153 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=04-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=03-10-2017)
+2018-04-26 21:35:49,586 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=05-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=04-10-2017)
+2018-04-26 21:35:50,028 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=06-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=05-10-2017)
+2018-04-26 21:35:50,421 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=07-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=06-10-2017)
+2018-04-26 21:35:50,862 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=08-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=07-10-2017)
+2018-04-26 21:35:51,226 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=09-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=08-10-2017)
+2018-04-26 21:35:51,722 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=10-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=09-10-2017)
+2018-04-26 21:35:52,106 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=11-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=10-10-2017)
+2018-04-26 21:35:52,534 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=12-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=11-10-2017)
+2018-04-26 21:35:52,998 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=13-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=12-10-2017)
+2018-04-26 21:35:53,399 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=14-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=13-10-2017)
+2018-04-26 21:35:53,872 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=15-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=14-10-2017)
+2018-04-26 21:35:54,301 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=16-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=15-10-2017)
+2018-04-26 21:35:54,805 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=16-10-2017)
+2018-04-26 21:35:55,223 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-10-2017)
+2018-04-26 21:35:55,669 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-10-2017)
+2018-04-26 21:35:56,117 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-10-2017)
+2018-04-26 21:35:57,044 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-10-2017)
+2018-04-26 21:35:57,557 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-10-2017)
+2018-04-26 21:35:58,105 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-10-2017)
+2018-04-26 21:35:59,013 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-10-2017)
+2018-04-26 21:35:59,423 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-10-2017)
+2018-04-26 21:35:59,914 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-10-2017)
+2018-04-26 21:36:00,576 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=27-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=26-10-2017)
+2018-04-26 21:36:00,979 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=28-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=27-10-2017)
+2018-04-26 21:36:01,411 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=29-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=28-10-2017)
+2018-04-26 21:36:01,791 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=30-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=29-10-2017)
+2018-04-26 21:36:02,230 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=31-10-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=30-10-2017)
+2018-04-26 21:36:02,522 INFO Crawled 124 pages (at 124 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 21:36:02,644 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=01-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=31-10-2017)
+2018-04-26 21:36:03,022 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=02-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=01-11-2017)
+2018-04-26 21:36:03,395 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=03-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=02-11-2017)
+2018-04-26 21:36:03,821 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=04-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=03-11-2017)
+2018-04-26 21:36:04,236 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=05-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=04-11-2017)
+2018-04-26 21:36:04,653 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=06-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=05-11-2017)
+2018-04-26 21:36:05,049 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=07-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=06-11-2017)
+2018-04-26 21:36:05,531 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=08-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=07-11-2017)
+2018-04-26 21:36:05,942 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=09-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=08-11-2017)
+2018-04-26 21:36:06,375 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=10-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=09-11-2017)
+2018-04-26 21:36:06,775 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=11-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=10-11-2017)
+2018-04-26 21:36:07,221 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=12-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=11-11-2017)
+2018-04-26 21:36:07,605 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=13-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=12-11-2017)
+2018-04-26 21:36:08,016 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=14-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=13-11-2017)
+2018-04-26 21:36:08,403 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=15-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=14-11-2017)
+2018-04-26 21:36:08,860 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=16-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=15-11-2017)
+2018-04-26 21:36:09,298 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=16-11-2017)
+2018-04-26 21:36:09,725 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-11-2017)
+2018-04-26 21:36:10,134 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-11-2017)
+2018-04-26 21:36:10,613 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-11-2017)
+2018-04-26 21:36:11,017 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-11-2017)
+2018-04-26 21:36:11,457 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-11-2017)
+2018-04-26 21:36:11,982 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-11-2017)
+2018-04-26 21:36:12,379 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-11-2017)
+2018-04-26 21:36:12,817 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-11-2017)
+2018-04-26 21:36:13,278 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-11-2017)
+2018-04-26 21:36:13,738 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=27-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=26-11-2017)
+2018-04-26 21:36:14,148 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=28-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=27-11-2017)
+2018-04-26 21:36:14,566 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=29-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=28-11-2017)
+2018-04-26 21:36:15,040 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=30-11-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=29-11-2017)
+2018-04-26 21:36:15,479 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=01-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=30-11-2017)
+2018-04-26 21:36:15,914 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=02-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=01-12-2017)
+2018-04-26 21:36:16,576 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=03-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=02-12-2017)
+2018-04-26 21:36:17,048 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=04-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=03-12-2017)
+2018-04-26 21:36:17,508 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=05-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=04-12-2017)
+2018-04-26 21:36:17,924 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=06-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=05-12-2017)
+2018-04-26 21:36:18,484 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=07-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=06-12-2017)
+2018-04-26 21:36:18,977 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=08-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=07-12-2017)
+2018-04-26 21:36:19,382 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=09-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=08-12-2017)
+2018-04-26 21:36:19,830 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=10-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=09-12-2017)
+2018-04-26 21:36:20,286 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=11-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=10-12-2017)
+2018-04-26 21:36:20,721 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=12-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=11-12-2017)
+2018-04-26 21:36:21,187 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=13-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=12-12-2017)
+2018-04-26 21:36:21,634 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=14-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=13-12-2017)
+2018-04-26 21:36:22,110 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=15-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=14-12-2017)
+2018-04-26 21:36:22,514 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=16-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=15-12-2017)
+2018-04-26 21:36:23,311 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=16-12-2017)
+2018-04-26 21:36:23,727 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-12-2017)
+2018-04-26 21:36:24,168 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-12-2017)
+2018-04-26 21:36:24,659 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-12-2017)
+2018-04-26 21:36:25,077 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-12-2017)
+2018-04-26 21:36:25,505 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-12-2017)
+2018-04-26 21:36:25,958 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-12-2017)
+2018-04-26 21:36:26,433 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-12-2017)
+2018-04-26 21:36:26,877 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-12-2017)
+2018-04-26 21:36:27,338 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-12-2017)
+2018-04-26 21:36:27,797 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=27-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=26-12-2017)
+2018-04-26 21:36:28,283 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=28-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=27-12-2017)
+2018-04-26 21:36:28,695 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=29-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=28-12-2017)
+2018-04-26 21:36:29,215 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=30-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=29-12-2017)
+2018-04-26 21:36:29,630 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=31-12-2017> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=30-12-2017)
+2018-04-26 21:36:30,083 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=01-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=31-12-2017)
+2018-04-26 21:36:30,609 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=02-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=01-01-2018)
+2018-04-26 21:36:31,071 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=03-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=02-01-2018)
+2018-04-26 21:36:31,495 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=04-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=03-01-2018)
+2018-04-26 21:36:31,943 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=05-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=04-01-2018)
+2018-04-26 21:36:32,393 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=06-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=05-01-2018)
+2018-04-26 21:36:32,929 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=07-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=06-01-2018)
+2018-04-26 21:36:33,410 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=08-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=07-01-2018)
+2018-04-26 21:36:33,868 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=09-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=08-01-2018)
+2018-04-26 21:36:34,306 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=10-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=09-01-2018)
+2018-04-26 21:36:34,773 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=11-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=10-01-2018)
+2018-04-26 21:36:35,203 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=12-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=11-01-2018)
+2018-04-26 21:36:35,786 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=13-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=12-01-2018)
+2018-04-26 21:36:36,279 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=14-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=13-01-2018)
+2018-04-26 21:36:36,720 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=15-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=14-01-2018)
+2018-04-26 21:36:37,251 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=16-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=15-01-2018)
+2018-04-26 21:36:37,708 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=16-01-2018)
+2018-04-26 21:36:38,152 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-01-2018)
+2018-04-26 21:36:38,589 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-01-2018)
+2018-04-26 21:36:39,027 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-01-2018)
+2018-04-26 21:36:39,489 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-01-2018)
+2018-04-26 21:36:39,943 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-01-2018)
+2018-04-26 21:36:40,495 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-01-2018)
+2018-04-26 21:36:40,932 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-01-2018)
+2018-04-26 21:36:41,396 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-01-2018)
+2018-04-26 21:36:41,913 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-01-2018)
+2018-04-26 21:36:42,800 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=27-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=26-01-2018)
+2018-04-26 21:36:43,777 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=28-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=27-01-2018)
+2018-04-26 21:36:44,603 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=29-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=28-01-2018)
+2018-04-26 21:36:45,073 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=30-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=29-01-2018)
+2018-04-26 21:36:45,524 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=31-01-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=30-01-2018)
+2018-04-26 21:36:46,122 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=01-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=31-01-2018)
+2018-04-26 21:36:46,621 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=02-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=01-02-2018)
+2018-04-26 21:36:47,163 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=03-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=02-02-2018)
+2018-04-26 21:36:47,731 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=04-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=03-02-2018)
+2018-04-26 21:36:48,278 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=05-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=04-02-2018)
+2018-04-26 21:36:48,952 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=06-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=05-02-2018)
+2018-04-26 21:36:49,466 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=07-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=06-02-2018)
+2018-04-26 21:36:50,027 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=08-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=07-02-2018)
+2018-04-26 21:36:50,776 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=09-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=08-02-2018)
+2018-04-26 21:36:51,284 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=10-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=09-02-2018)
+2018-04-26 21:36:51,789 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=11-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=10-02-2018)
+2018-04-26 21:36:52,304 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=12-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=11-02-2018)
+2018-04-26 21:36:52,795 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=13-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=12-02-2018)
+2018-04-26 21:36:53,352 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=14-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=13-02-2018)
+2018-04-26 21:36:53,818 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=15-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=14-02-2018)
+2018-04-26 21:36:54,031 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=16-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=15-02-2018)
+2018-04-26 21:36:54,297 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=16-02-2018)
+2018-04-26 21:36:54,513 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-02-2018)
+2018-04-26 21:36:54,746 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-02-2018)
+2018-04-26 21:36:55,280 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-02-2018)
+2018-04-26 21:36:55,785 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-02-2018)
+2018-04-26 21:36:56,253 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-02-2018)
+2018-04-26 21:36:56,745 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-02-2018)
+2018-04-26 21:36:57,234 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-02-2018)
+2018-04-26 21:36:57,754 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-02-2018)
+2018-04-26 21:36:58,257 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-02-2018)
+2018-04-26 21:36:58,781 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=27-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=26-02-2018)
+2018-04-26 21:36:59,288 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=28-02-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=27-02-2018)
+2018-04-26 21:36:59,802 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=01-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=28-02-2018)
+2018-04-26 21:37:00,318 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=02-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=01-03-2018)
+2018-04-26 21:37:00,837 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=03-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=02-03-2018)
+2018-04-26 21:37:01,323 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=04-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=03-03-2018)
+2018-04-26 21:37:01,803 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=05-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=04-03-2018)
+2018-04-26 21:37:02,349 INFO Crawled 249 pages (at 125 pages/min), scraped 0 items (at 0 items/min)
+2018-04-26 21:37:02,360 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=06-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=05-03-2018)
+2018-04-26 21:37:02,852 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=07-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=06-03-2018)
+2018-04-26 21:37:03,333 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=08-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=07-03-2018)
+2018-04-26 21:37:03,846 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=09-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=08-03-2018)
+2018-04-26 21:37:04,367 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=10-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=09-03-2018)
+2018-04-26 21:37:05,103 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=11-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=10-03-2018)
+2018-04-26 21:37:05,957 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=12-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=11-03-2018)
+2018-04-26 21:37:06,560 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=13-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=12-03-2018)
+2018-04-26 21:37:07,314 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=14-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=13-03-2018)
+2018-04-26 21:37:08,062 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=15-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=14-03-2018)
+2018-04-26 21:37:08,795 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=16-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=15-03-2018)
+2018-04-26 21:37:09,372 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=16-03-2018)
+2018-04-26 21:37:09,966 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-03-2018)
+2018-04-26 21:37:10,503 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-03-2018)
+2018-04-26 21:37:11,025 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-03-2018)
+2018-04-26 21:37:11,610 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-03-2018)
+2018-04-26 21:37:12,120 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-03-2018)
+2018-04-26 21:37:12,656 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-03-2018)
+2018-04-26 21:37:13,206 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-03-2018)
+2018-04-26 21:37:13,726 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-03-2018)
+2018-04-26 21:37:14,319 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-03-2018)
+2018-04-26 21:37:14,868 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=27-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=26-03-2018)
+2018-04-26 21:37:15,390 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=28-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=27-03-2018)
+2018-04-26 21:37:15,856 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=29-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=28-03-2018)
+2018-04-26 21:37:16,528 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=30-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=29-03-2018)
+2018-04-26 21:37:17,069 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=31-03-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=30-03-2018)
+2018-04-26 21:37:17,607 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=01-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=31-03-2018)
+2018-04-26 21:37:18,133 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=02-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=01-04-2018)
+2018-04-26 21:37:18,645 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=03-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=02-04-2018)
+2018-04-26 21:37:19,249 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=04-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=03-04-2018)
+2018-04-26 21:37:19,856 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=05-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=04-04-2018)
+2018-04-26 21:37:20,357 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=06-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=05-04-2018)
+2018-04-26 21:37:20,961 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=07-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=06-04-2018)
+2018-04-26 21:37:21,491 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=08-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=07-04-2018)
+2018-04-26 21:37:22,177 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=09-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=08-04-2018)
+2018-04-26 21:37:22,710 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=10-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=09-04-2018)
+2018-04-26 21:37:23,229 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=11-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=10-04-2018)
+2018-04-26 21:37:23,865 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=12-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=11-04-2018)
+2018-04-26 21:37:24,465 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=13-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=12-04-2018)
+2018-04-26 21:37:25,210 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=14-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=13-04-2018)
+2018-04-26 21:37:25,791 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=15-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=14-04-2018)
+2018-04-26 21:37:26,492 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=16-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=15-04-2018)
+2018-04-26 21:37:27,020 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=17-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=16-04-2018)
+2018-04-26 21:37:27,546 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=18-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=17-04-2018)
+2018-04-26 21:37:28,050 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=19-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=18-04-2018)
+2018-04-26 21:37:28,548 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=20-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=19-04-2018)
+2018-04-26 21:37:29,120 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=21-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=20-04-2018)
+2018-04-26 21:37:29,674 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=22-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=21-04-2018)
+2018-04-26 21:37:30,297 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=23-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=22-04-2018)
+2018-04-26 21:37:30,855 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=24-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=23-04-2018)
+2018-04-26 21:37:31,393 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=25-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=24-04-2018)
+2018-04-26 21:37:31,956 DEBUG Crawled (200) <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-04-2018)
+2018-04-26 21:37:32,381 ERROR Spider error processing <GET http://ketqua.net/xo-so-mien-bac.php?ngay=26-04-2018> (referer: http://ketqua.net/xo-so-mien-bac.php?ngay=25-04-2018)
+Traceback (most recent call last):
+  File "/anaconda3/envs/crawl/lib/python3.6/site-packages/scrapy/utils/defer.py", line 102, in iter_errback
+    yield next(it)
+  File "/anaconda3/envs/crawl/lib/python3.6/site-packages/scrapy/spidermiddlewares/offsite.py", line 30, in process_spider_output
+    for x in result:
+  File "/anaconda3/envs/crawl/lib/python3.6/site-packages/scrapy/spidermiddlewares/referer.py", line 339, in <genexpr>
+    return (_set_referer(r) for r in result or ())
+  File "/anaconda3/envs/crawl/lib/python3.6/site-packages/scrapy/spidermiddlewares/urllength.py", line 37, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/anaconda3/envs/crawl/lib/python3.6/site-packages/scrapy/spidermiddlewares/depth.py", line 58, in <genexpr>
+    return (r for r in result or () if _filter(r))
+  File "/Users/qnkhuat/Desktop/lottery/lottery/spiders/lottery.py", line 114, in parse
+    date= self.start_urls[self.current].split('=')
+IndexError: list index out of range
+2018-04-26 21:37:32,389 INFO Closing spider (finished)
+2018-04-26 21:37:32,389 INFO Dumping Scrapy stats:
+{'downloader/request_bytes': 132682,
+ 'downloader/request_count': 301,
+ 'downloader/request_method_count/GET': 301,
+ 'downloader/response_bytes': 3570523,
+ 'downloader/response_count': 301,
+ 'downloader/response_status_count/200': 301,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 4, 26, 14, 37, 32, 389464),
+ 'log_count/DEBUG': 302,
+ 'log_count/ERROR': 1,
+ 'log_count/INFO': 9,
+ 'memusage/max': 84340736,
+ 'memusage/startup': 63483904,
+ 'request_depth_max': 299,
+ 'response_received_count': 301,
+ 'scheduler/dequeued': 300,
+ 'scheduler/dequeued/memory': 300,
+ 'scheduler/enqueued': 300,
+ 'scheduler/enqueued/memory': 300,
+ 'spider_exceptions/IndexError': 1,
+ 'start_time': datetime.datetime(2018, 4, 26, 14, 35, 2, 347661)}
+2018-04-26 21:37:32,390 INFO Spider closed (finished)

@@ -1,29 +1,28 @@
 import numpy as np
 import openpyxl
+from data_ulis import update()
 
 
-
-file_path = './excels/lottery100.xlsx'
-save_path = './excels/analysis100.xlsx'
-
-wb=openpyxl.load_workbook(file_path)
-sheet=wb.active
-
-max_row=sheet.max_row+1
-max_col=sheet.max_column
+file_path = './excels/lottery.xlsx'
+save_path = './excels/analysis.xlsx'
 
 
-def get_percentage():
+def get_percentage(sheet):
     ###compute percentage
+    max_row=sheet.max_row+1
+    max_col=sheet.max_column
 
     row=max_row+1
     sheet.cell(row=row,column=1).value='Tỉ lệ %'
     for i in range(2,max_col+1):
         sheet.cell(row=row,column=i).value='=SUM(INDIRECT(ADDRESS(1,COLUMN())&":"&ADDRESS(ROW()-1,COLUMN())))*100/'+str(max_row)
 
-    wb.save(save_path)
 
-def get_frequency():
+
+def get_frequency(sheet):
+    max_row=sheet.max_row+1
+    max_col=sheet.max_column
+
     row=max_row +1 +1
     sheet.cell(row=row,column=1).value='Tần suất xuất hiện:'
     row=max_row +1 +1 +1
@@ -57,13 +56,23 @@ def get_frequency():
         sheet.cell(row=l+3,column=i).value=max
 
 
-    wb.save(save_path)
 
 
 
 def main():
-    get_percentage()
-    get_frequency()
+    update('excels/lottery.xlsx')
+
+
+    wb=openpyxl.load_workbook(file_path)
+    sheet_names= wb.get_sheet_names()
+    for sheet_name in ['100','300','800']:
+        sheet=wb[sheet_name]
+
+
+        get_percentage(sheet)
+        get_frequency(sheet)
+
+        wb.save(save_path)
 
 
 

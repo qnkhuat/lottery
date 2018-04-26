@@ -138,7 +138,7 @@ class InputPage(tk.Frame):
 
         self.input.bind('<Return>',self.get_date)
 
-        self.done_button = tk.Button(self, text='Done',command=self.go_to_home_page)#generate run button but dont appear
+        self.done_button = tk.Button(self, text='Lưu',command=self.go_to_home_page)#generate run button but dont appear
 
 
         # write_new_date(date,data,file_path)
@@ -269,7 +269,7 @@ def main():
 
     '''
     logging.info('Open')
-    update()
+    update(data_path)
     app = SampleApp()
     app.mainloop()
 

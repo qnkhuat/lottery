@@ -147,7 +147,7 @@ def check_balance(data_path,history_path):
 def get_history():
     pass
 
-def scrawl_day(days,urls):
+def scrawl_day(days,urls,data_path):
     import bs4
     import requests
 
@@ -156,34 +156,37 @@ def scrawl_day(days,urls):
         layout = bs4.BeautifulSoup(res.text,'lxml')
 
 
-        wb,sheet,max_row,max_col=open_file(data_path,active=True)
+        wb=open_file(data_path)
+        for sheet_name in ['100','200','300']:
+            sheet=wb[sheet_name]
+            max_row=sheet.max_row
 
 
 
-        divs =layout.select('.chu17.need_blank')# all number of that day
-        numbers = dict((el,0) for el in range(100))
-        for div in divs:
-            number = int(div.text)
-            numbers[number]+=1
+            divs =layout.select('.chu17.need_blank')# all number of that day
+            numbers = dict((el,0) for el in range(100))
+            for div in divs:
+                number = int(div.text)
+                numbers[number]+=1
 
 
-        #write datetime
-        sheet.cell(row=max_row+1,column=1).value=day
+            #write datetime
+            sheet.cell(row=max_row+1,column=1).value=day
 
 
-        #write number
-        for idx,number in numbers.items():
-            if number !=0:
-                sheet.cell(row=max_row+1,column=idx+2).value=number
-                sheet.cell(row=max_row+1,column=idx+2).fill=get_color(number)
+            #write number
+            for idx,number in numbers.items():
+                if number !=0:
+                    sheet.cell(row=max_row+1,column=idx+2).value=number
+                    sheet.cell(row=max_row+1,column=idx+2).fill=get_color(number)
 
-        max_row+=1#update to write next part
-        wb.save(data_path)
-        logging.info('Scrawling data of '+day)
+            max_row+=1#update to write next part
+            wb.save(data_path)
+            logging.info('Scrawling data of '+day)
 
 
 
-def update():# BUG: just can update new day
+def update(data_path):# BUG: just can update new day
     days , urls=get_list_of_N_day_ago(30)# just check for last 30 days
     data = convert_data_to_dict(data_path)
 
@@ -193,8 +196,7 @@ def update():# BUG: just can update new day
         if day not in data.keys():#if the key don't contain any element in days we will crawl it
             days_to_update.append(day)
             urls_to_update.append(urls[idx])
-
-    scrawl_day(days_to_update,urls_to_update)
+    scrawl_day(days_to_update,urls_to_update,data_path)
 
 
 def input_data(file_path):
