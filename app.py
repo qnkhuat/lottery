@@ -53,7 +53,7 @@ class SampleApp(tk.Tk):
         container.grid_columnconfigure(0, weight=1)
 
         self.frames = {}
-        for F in (StartPage, InputPage, HistoryPage,BalancePage):
+        for F in (StartPage, InputPage):
             page_name = F.__name__
             frame = F(parent=container, controller=self)
             self.frames[page_name] = frame
@@ -91,11 +91,11 @@ class StartPage(tk.Frame):
 
 
         input_button=self.get_button('InputPage',controller)
-        history_button=self.get_button('HistoryPage',controller)
-        banlance_button=self.get_button('BalancePage',controller)
+        #history_button=self.get_button('HistoryPage',controller)
+        #banlance_button=self.get_button('BalancePage',controller)
         input_button.pack()
-        history_button.pack()
-        banlance_button.pack()
+        #history_button.pack()
+        #banlance_button.pack()
 
     def update(self):##update label each 1s
         balance = check_balance(self.data_path,self.file_path)
@@ -106,7 +106,7 @@ class StartPage(tk.Frame):
 
 
     def get_button(self,Page_name,controller):
-        return tk.Button(self, text=Page_name,
+        return tk.Button(self, text='Nhap lich su',
                             command=lambda: controller.show_frame(Page_name))
 
 
@@ -144,7 +144,7 @@ class InputPage(tk.Frame):
         # write_new_date(date,data,file_path)
 
         #back to start page
-        button = tk.Button(self, text="Go to the start page",
+        button = tk.Button(self, text="Back",
                            command=lambda: controller.show_frame("StartPage"))
         button.pack()
 

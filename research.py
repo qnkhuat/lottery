@@ -1,10 +1,10 @@
 import numpy as np
 import openpyxl
-from data_ulis import update()
+from data_ulis import update
 
 
 file_path = './excels/lottery.xlsx'
-save_path = './excels/analysis.xlsx'
+save_path = '../bang phan tich/analysis.xlsx'
 
 
 def get_percentage(sheet):
@@ -64,7 +64,6 @@ def main():
 
 
     wb=openpyxl.load_workbook(file_path)
-    sheet_names= wb.get_sheet_names()
     for sheet_name in ['100','300','800']:
         sheet=wb[sheet_name]
 
