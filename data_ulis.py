@@ -4,7 +4,7 @@ import re
 from pprint import pprint
 from openpyxl.styles import Color, PatternFill, Font, Border
 import logging
-logging.basicConfig(level=logging.INFO,
+logging.basicConfig(level=logging.INFO,filename='app.log',
                 format='%(asctime)s %(levelname)s %(message)s')
 '''
 - Check balance
@@ -66,6 +66,7 @@ def write_new_date(date,data,file_path):
 
     sheet.merge_cells(start_row=int(max_row+1),start_column=date_col,end_row=int(max_row+2),end_column=date_col)
     wb.save(file_path)
+    logging.info('Wrote new data')
 
 
 
@@ -178,7 +179,7 @@ def scrawl_day(days,urls):
 
         max_row+=1#update to write next part
         wb.save(data_path)
-        logging.info('Scrawling data of ',day)
+        logging.info('Scrawling data of '+day)
 
 
 
@@ -194,7 +195,6 @@ def update():# BUG: just can update new day
             urls_to_update.append(urls[idx])
 
     scrawl_day(days_to_update,urls_to_update)
-    logging.info('Everything is up-to-date')
 
 
 def input_data(file_path):

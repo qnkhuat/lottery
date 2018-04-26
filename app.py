@@ -3,6 +3,7 @@ from data_ulis import *
 from tkinter import ttk
 import tkinter.messagebox as tm
 import datetime
+import logging
 '''
 TODO:
 - create input method note : DONE
@@ -11,9 +12,11 @@ TODO:
 - auto compute balance : DONE
 - rewrite the scrawl method:DONE
 - write update result method:DONE # BUG: but just can update new day
+- basic GUI: DONE
+- Balance view : DONE
+- History view
 - write view history :
 - write view history balance
-- GUI: DOING
 '''
 
 class but:
@@ -135,6 +138,8 @@ class InputPage(tk.Frame):
 
         self.input.bind('<Return>',self.get_date)
 
+        self.done_button = tk.Button(self, text='Done',command=self.go_to_home_page)#generate run button but dont appear
+
 
         # write_new_date(date,data,file_path)
 
@@ -154,35 +159,26 @@ class InputPage(tk.Frame):
             self.date=datetime.datetime.strptime(date + '/'+ current_year, '%d/%m/%Y').strftime('%d-%m-%Y')
             self.input.delete(0,'end')#clear input
             self.input.bind('<Return>',self.get_number)
+
             self.title['text']='Con nào?'#change title
+            self.done_button.pack()#appear the done button out
         else:
             tm.showerror('Error','Ngày không hợp lệ')
 
 
-    def get_amount(self,event=None):
-
-        amount = self.input.get() # output of input
-        if amount.isdigit():
-            self.data[self.number_temp]=amount
-            self.input.delete(0,'end')#clear input
-            self.input.bind('<Return>',self.get_number)#back to get_number
-            self.title['text']='Con nào?'#change title
-        else:
-            tm.showerror('Error','Số lượng không hợp lệ')
-
     def get_number(self,event=None):
         number = self.input.get() # output of input
-        if number=='stop':# save file when input stop
-            write_new_date(self.date,self.data,self.file_path)
-            self.input.delete(0,'end')#clear input
-            self.controller.show_frame('StartPage') #back to satrt page when type stop
-            self.data,self.data='',[] #delete all the cache
-        elif number.isdigit():
+
+        if number.isdigit():
             self.number_temp = number
             self.data[number]=0# initia dicts
             self.input.delete(0,'end')#clear input
             self.input.bind('<Return>',self.get_amount)
+
+
             self.title['text']='Bao trứng?'#change title
+            self.done_button.pack_forget()#hide the button when input amount
+
         else:
             tm.showerror('Error','Số không hợp lệ')
 
@@ -190,6 +186,27 @@ class InputPage(tk.Frame):
 
 
 
+    def get_amount(self,event=None):
+
+        amount = self.input.get() # output of input
+
+        if amount.isdigit() and int(amount)>0:
+            self.data[self.number_temp]=amount
+            self.input.delete(0,'end')#clear input
+            self.input.bind('<Return>',self.get_number)#back to get_number
+
+
+            self.title['text']='Con nào?'#change title
+            self.done_button.pack()#hide the button when input amount
+
+        else:
+            tm.showerror('Error','Số lượng không hợp lệ')
+
+    def go_to_home_page(self,event=None):#when input amount done done_button will appear
+        write_new_date(self.date,self.data,self.file_path)
+        self.input.bind('<Return>',self.get_date)#reset the input to get date
+        self.data,self.data='',[] #delete all the cache
+        self.controller.show_frame('StartPage') #back to start page when type click done
 
 
 class HistoryPage(tk.Frame):
@@ -251,6 +268,7 @@ def main():
     - watch history balance and play
 
     '''
+    logging.info('Open')
     update()
     app = SampleApp()
     app.mainloop()
