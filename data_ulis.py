@@ -1,9 +1,11 @@
-from tkinter import *
 import openpyxl as xl
 import datetime
 import re
 from pprint import pprint
 from openpyxl.styles import Color, PatternFill, Font, Border
+import logging
+logging.basicConfig(level=logging.INFO,
+                format='%(asctime)s %(levelname)s %(message)s')
 '''
 - Check balance
 - Input
@@ -77,10 +79,7 @@ def write_new_date(date,data,file_path):
 
 
     sheet.merge_cells(start_row=int(max_row+1),start_column=date_col,end_row=int(max_row+2),end_column=date_col)
-
-
     wb.save(file_path)
-
 
 
 
@@ -135,6 +134,9 @@ def convert_data_to_dict(path_dir):
         data[sheet.cell(row=i,column=date_col).value]=temp
     return data
 
+def check_history():
+    pass
+
 
 def check_balance():
     capital = 50000000#start capital
@@ -152,6 +154,7 @@ def check_balance():
             capital -= int(day['amount'][idx])*money_per_ticket # NOTE: first it will minus your fee
             capital += int(day['amount'][idx])*win_money_per_tickey*day_result[int(number)] # NOTE: then will plus with win and multiple rate
 
+
     return capital
 
 def get_history():
@@ -165,7 +168,9 @@ def scrawl_day(days,urls):
         res = requests.get(urls[idx])
         layout = bs4.BeautifulSoup(res.text,'lxml')
 
+
         wb,sheet,max_row,max_col=open_file(data_path,active=True)
+
 
 
         divs =layout.select('.chu17.need_blank')# all number of that day
@@ -185,14 +190,13 @@ def scrawl_day(days,urls):
                 sheet.cell(row=max_row+1,column=idx+2).value=number
                 sheet.cell(row=max_row+1,column=idx+2).fill=get_color(number)
 
-
-
         max_row+=1#update to write next part
-
         wb.save(data_path)
+        logging.info('Scrawling data of ',day)
 
 
-def update():# NOTE: just can update new day
+
+def update():# BUG: just can update new day
     days , urls=get_list_of_N_day_ago(30)# just check for last 30 days
     data = convert_data_to_dict(data_path)
 
@@ -204,6 +208,7 @@ def update():# NOTE: just can update new day
             urls_to_update.append(urls[idx])
 
     scrawl_day(days_to_update,urls_to_update)
+    logging.info('Everything is up-to-date')
 
 
 def input_data(file_path):
