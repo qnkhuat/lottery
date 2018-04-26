@@ -1,7 +1,8 @@
 import tkinter as tk
 from data_ulis import *
 from tkinter import ttk
-
+import tkinter.messagebox as tm
+import datetime
 '''
 TODO:
 - create input method note : DONE
@@ -42,6 +43,7 @@ class SampleApp(tk.Tk):
         # the container is where we'll stack a bunch of frames
         # on top of each other, then the one we want visible
         # will be raised above the others
+        self.geometry('300x300')
         container = tk.Frame(self)
         container.pack(side="top", fill="both", expand=True)
         container.grid_rowconfigure(0, weight=1)
@@ -70,18 +72,19 @@ class StartPage(tk.Frame):
 
     def __init__(self, parent, controller):
         self.curent_button = 0 #to update button number
+        self.file_path='./excels/history.xlsx'
+        self.data_path='./excels/lottery100.xlsx'
 
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        label = tk.Label(self, text="This is the start page")
-        label.pack(side="top", fill="x", pady=10)
 
-        balance = check_balance()
 
+
+        balance = check_balance(self.data_path,self.file_path)
         message='Vốn còn: ' + '{:0,}đ'.format(balance)
-
-        label = tk.Label(self, text=message)
-        label.pack(side="top", fill="x", pady=10)
+        self.balance_status = tk.Label(self, text=message)
+        self.balance_status.pack(side="top", fill="x", pady=10)
+        self.update()
 
 
         input_button=self.get_button('InputPage',controller)
@@ -91,6 +94,12 @@ class StartPage(tk.Frame):
         history_button.pack()
         banlance_button.pack()
 
+    def update(self):##update label each 1s
+        balance = check_balance(self.data_path,self.file_path)
+        message='Vốn còn: ' + '{:0,}đ'.format(balance)
+        self.balance_status['text']=message
+        self.balance_status.after(1000, self.update) # call this method again in 1,000 milliseconds
+
 
 
     def get_button(self,Page_name,controller):
@@ -99,16 +108,88 @@ class StartPage(tk.Frame):
 
 
 
+
+
+
 class InputPage(tk.Frame):
 
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        label = tk.Label(self, text="This is InputPage ")
+        self.file_path='./excels/history.xlsx'
+        self.date,self.data='',{}
+        self.number_temp=0#temparaty variable to save number input
+
+
+
+        label = tk.Label(self, text="Nhập lịch sử chơi ")
         label.pack(side="top", fill="x", pady=10)
+
+        # XXX: title of phase
+        self.title = tk.Label(self,text='Chơi ngày nào nhỉ(dd/mm)')
+        self.title.pack()
+
+
+        self.input = tk.Entry(self)
+        self.input.pack()
+
+        self.input.bind('<Return>',self.get_date)
+
+
+        # write_new_date(date,data,file_path)
+
+        #back to start page
         button = tk.Button(self, text="Go to the start page",
                            command=lambda: controller.show_frame("StartPage"))
         button.pack()
+
+
+
+    def get_date(self,event=None):
+        current_year = str(datetime.datetime.now().year)
+
+        self.temp = self.input.get()#get date input
+        if(date_valid(self.temp)):# if date valid so pass this phase
+            date =self.input.get()
+            self.date=datetime.datetime.strptime(date + '/'+ current_year, '%d/%m/%Y').strftime('%d-%m-%Y')
+            self.input.delete(0,'end')#clear input
+            self.input.bind('<Return>',self.get_number)
+            self.title['text']='Con nào?'#change title
+        else:
+            tm.showerror('Error','Ngày không hợp lệ')
+
+
+    def get_amount(self,event=None):
+
+        amount = self.input.get() # output of input
+        if amount.isdigit():
+            self.data[self.number_temp]=amount
+            self.input.delete(0,'end')#clear input
+            self.input.bind('<Return>',self.get_number)#back to get_number
+            self.title['text']='Con nào?'#change title
+        else:
+            tm.showerror('Error','Số lượng không hợp lệ')
+
+    def get_number(self,event=None):
+        number = self.input.get() # output of input
+        if number=='stop':# save file when input stop
+            write_new_date(self.date,self.data,self.file_path)
+            self.input.delete(0,'end')#clear input
+            self.controller.show_frame('StartPage') #back to satrt page when type stop
+            self.data,self.data='',[] #delete all the cache
+        elif number.isdigit():
+            self.number_temp = number
+            self.data[number]=0# initia dicts
+            self.input.delete(0,'end')#clear input
+            self.input.bind('<Return>',self.get_amount)
+            self.title['text']='Bao trứng?'#change title
+        else:
+            tm.showerror('Error','Số không hợp lệ')
+
+        # write_new_date(self.date,self.data,self.file_path)
+
+
+
 
 
 class HistoryPage(tk.Frame):
@@ -116,8 +197,14 @@ class HistoryPage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
+        self.file_path='./excels/history.xlsx'
+        self.data_path='./excels/lottery100.xlsx'
+
         label = tk.Label(self, text="This is HistoryPage")
         label.pack(side="top", fill="x", pady=10)
+
+
+        #back to start page
         button = tk.Button(self, text="Go to the start page",
                            command=lambda: controller.show_frame("StartPage"))
         button.pack()
@@ -128,19 +215,28 @@ class BalancePage(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         self.controller = controller
-        balance = check_balance()
+        self.file_path='./excels/history.xlsx'
+        self.data_path='./excels/lottery100.xlsx'
 
+        balance = check_balance(self.data_path,self.file_path)
         message='Vốn còn: ' + '{:0,}đ'.format(balance)
 
         label = tk.Label(self, text=message)
         label.pack(side="top", fill="x", pady=10)
+
+
+        #back to start page
         button = tk.Button(self, text="Go to the start page",
                            command=lambda: controller.show_frame("StartPage"))
         button.pack()
 
 
+
+
 def main():
+    data_path='./excels/lottery100.xlsx'
     file_path='./excels/history.xlsx'
+
     # input_data(file_path)
     # check_win()
     # convert_data('./excels/history.xlsx')

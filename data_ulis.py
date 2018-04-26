@@ -45,20 +45,6 @@ def open_file(file_path,active=False):# XXX: create a saving file
         return wb
 
 
-
-def write_to_sheet(col_name,row,col,sheet,content):# XXX: method to write into excel
-
-    '''
-    Usange
-    col_name =[date,number,amount]
-    row: row to write
-    '''
-
-    sheet.cell(row=row,column=col).value = content
-    return sheet
-
-
-
 def write_new_date(date,data,file_path):
     '''
     data = {number:amount}
@@ -138,7 +124,7 @@ def check_history():
     pass
 
 
-def check_balance():
+def check_balance(data_path,history_path):
     capital = 50000000#start capital
     win_rate = 80/22
 
@@ -220,9 +206,9 @@ def input_data(file_path):
 
     stop =False
     while not stop:
-        date = input('Đi chợ ngày nào thế?(dd/mm)\n')+'/'+ current_year
+        date = input('Đi chợ ngày nào thế?(dd/mm)\n')
         if date_valid(date):
-            date =datetime.datetime.strptime(date, '%d/%m/%Y').strftime('%d-%m-%Y')
+            date =datetime.datetime.strptime(date + '/'+ current_year, '%d/%m/%Y').strftime('%d-%m-%Y')
             stop=True
         else:
             print('Ngày không hợp lệ')
@@ -296,9 +282,8 @@ def get_color(number):
 
 
 def date_valid(date):
-
     try:
-        datetime.datetime.strptime(date, '%d/%m/%Y')
+        datetime.datetime.strptime(date, '%d/%m')
     except :
         return False
     return True
