@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    {% block css %} {% endblock %}
+
+
+  </head>
+  <body>
+
+
+    <h3>{{balance}}</h3>
+
+    {% block content %}{% endblock %}
+    <a href="/insert"><button>Nhập lịch sử</button></a>
+    <a href="/history"><button>Xem lịch sử</button></a>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  </body>
+</html>

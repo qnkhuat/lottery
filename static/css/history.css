@@ -1,0 +1,10 @@
+table{
+
+}
+
+table td{
+  width: 30px;
+  text-align: center;
+  height: 20px;
+  border: 1px solid black;
+}

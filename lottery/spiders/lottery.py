@@ -38,7 +38,7 @@ class lottery(scrapy.Spider):
     name='lot'
 
     def __init__(self):
-        self.file_path='./excels/lottery300.xlsx'
+        self.file_path='./excels/lottery2000.xlsx'
         try:
             wb=openpyxl.load_workbook(self.file_path)
             self.exist=True
@@ -58,7 +58,7 @@ class lottery(scrapy.Spider):
 
         #generate urls
 
-        days,self.start_urls=get_list_of_N_day_ago(300)
+        days,self.start_urls=get_list_of_N_day_ago(2000)
         self.current=0#keep track current date to write
 
     #create freeze line

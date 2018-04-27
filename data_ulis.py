@@ -157,7 +157,7 @@ def scrawl_day(days,urls,data_path):
 
 
         wb=open_file(data_path)
-        for sheet_name in ['100','200','300']:
+        for sheet_name in ['100','300','800']:
             sheet=wb[sheet_name]
             max_row=sheet.max_row
 
@@ -189,7 +189,6 @@ def scrawl_day(days,urls,data_path):
 def update(data_path):# BUG: just can update new day
     days , urls=get_list_of_N_day_ago(30)# just check for last 30 days
     data = convert_data_to_dict(data_path)
-
     days_to_update=[]
     urls_to_update=[]
     for idx,day in enumerate(days):
