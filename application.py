@@ -2,10 +2,19 @@ from flask import Flask,render_template,request
 import openpyxl as xl
 import datetime
 from collections import OrderedDict
+import os
+
+
 
 app = Flask(__name__)
 app.debug =True
-date_col=1
+
+
+
+
+
+
+
 
 
 @app.route('/')
@@ -30,6 +39,90 @@ def result():
     return render_template('result.html',data=data)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+date_col=1
 def open_file(file_path,active=False):# XXX: create a saving file
     try:
         wb=xl.load_workbook(file_path)
