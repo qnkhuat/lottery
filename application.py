@@ -10,21 +10,22 @@ app = Flask(__name__)
 app.debug =True
 
 
-
-
-
-
-
-
-
 @app.route('/')
 def index():
     balance = check_balance('./excels/lottery300.xlsx','./excels/history.xlsx')
     return render_template('index.html',balance=balance)
 
-@app.route('/insert')
+@app.route('/insert', methods=['GET', 'POST'])
 def insert():
-    return render_template('insert.html')
+    if request.method=='GET':
+        return render_template('insert.html')
+    elif request.method == 'POST':
+        date=request.form.get('date')
+        numbers=request.form.getlist('number')
+        amounts=request.form.getlist('amount')
+        data=dict(zip(numbers, amounts))
+        write_new_date(date,data,'./excels/history.xlsx')
+        return render_template('index.html',balance=balance)
 
 @app.route('/history')
 def history():
@@ -119,7 +120,28 @@ def result():
 
 
 
+def write_new_date(date,data,file_path):
+    '''
+    data = {number:amount}
+    '''
+    wb,sheet,max_row,max_col=open_file(file_path,active=True)
 
+
+    i=2#to keep track of how many number we write
+    for number,amount in data.items():
+        row_for_number= max_row+1
+        row_for_amount= max_row+2
+        sheet.cell(row=row_for_number,column=i).value=number
+        sheet.cell(row=row_for_amount,column=i).value=amount
+        i+=1
+
+    sheet.cell(row=max_row+1,column=date_col).value=date
+    # print(max_row)
+
+
+    sheet.merge_cells(start_row=int(max_row+1),start_column=date_col,end_row=int(max_row+2),end_column=date_col)
+    wb.save(file_path)
+    # logging.info('Wrote new transaction')
 
 
 date_col=1
@@ -200,10 +222,13 @@ def check_balance(data_path,history_path):
 
     for date in history.keys():
         day = history[date]
-        day_result = data[date]
-        for idx,number in enumerate(day['number']):
-            capital -= int(day['amount'][idx])*money_per_ticket # NOTE: first it will minus your fee
-            capital += int(day['amount'][idx])*win_money_per_tickey*day_result[int(number)] # NOTE: then will plus with win and multiple rate
+        try:## if day are not in data so pass it
+            day_result = data[date]
+            for idx,number in enumerate(day['number']):
+                capital -= int(day['amount'][idx])*money_per_ticket # NOTE: first it will minus your fee
+                capital += int(day['amount'][idx])*win_money_per_tickey*day_result[int(number)] # NOTE: then will plus with win and multiple rate
 
+        except:
+            pass
 
     return capital

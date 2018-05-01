@@ -66,7 +66,7 @@ def write_new_date(date,data,file_path):
 
     sheet.merge_cells(start_row=int(max_row+1),start_column=date_col,end_row=int(max_row+2),end_column=date_col)
     wb.save(file_path)
-    logging.info('Wrote new data')
+    logging.info('Wrote new transaction')
 
 
 
@@ -134,13 +134,17 @@ def check_balance(data_path,history_path):
 
     history=convert_history_to_dict(history_path)
     data=convert_data_to_dict(data_path)
+
     for date in history.keys():
         day = history[date]
-        day_result = data[date]
-        for idx,number in enumerate(day['number']):
-            capital -= int(day['amount'][idx])*money_per_ticket # NOTE: first it will minus your fee
-            capital += int(day['amount'][idx])*win_money_per_tickey*day_result[int(number)] # NOTE: then will plus with win and multiple rate
+        try:## if day are not in data so pass it
+            day_result = data[date]
+            for idx,number in enumerate(day['number']):
+                capital -= int(day['amount'][idx])*money_per_ticket # NOTE: first it will minus your fee
+                capital += int(day['amount'][idx])*win_money_per_tickey*day_result[int(number)] # NOTE: then will plus with win and multiple rate
 
+        except:
+            pass
 
     return capital
 
@@ -157,7 +161,7 @@ def scrawl_day(days,urls,data_path):
 
 
         wb=open_file(data_path)
-        for sheet_name in ['100','300','800']:
+        for sheet_name in ['100','300','800','all']:
             sheet=wb[sheet_name]
             max_row=sheet.max_row
 
@@ -213,8 +217,6 @@ def input_data(file_path):
             stop=True
         else:
             print('Ngày không hợp lệ')
-
-
 
     stop = False
     data ={}
@@ -276,7 +278,7 @@ def get_color(number):
         return  PatternFill(start_color='2980b9',end_color='2980b9',fill_type='solid')#blue
     elif number==3:
         return  PatternFill(start_color='f1c40f',end_color='f1c40f',fill_type='solid')#yellow
-    elif number ==4:
+    elif number >=4:
         return  PatternFill(start_color='e74c3c',end_color='e74c3c',fill_type='solid')#red
     else:
         return  PatternFill(start_color='FFFF0000',end_color='FFFFFF',fill_type='solid')#white
