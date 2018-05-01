@@ -1,0 +1,30 @@
+
+#insert input{
+  width: 300px;
+  margin: 10px auto;
+}
+#insert {
+  width: 300px;
+  margin: 0 auto;
+}
+input.number , input.amount{
+  display: inline;
+  width: 148px !important;
+
+}
+
+table td{
+  width: 30px;
+  text-align: center;
+  height: 20px;
+  border: 1px solid black;
+}
+
+
+.wrap{
+  margin: 10px 0;
+
+}
+.wrap a button{
+  width: 100px;
+}

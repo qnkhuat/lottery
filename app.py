@@ -233,7 +233,7 @@ class BalancePage(tk.Frame):
         tk.Frame.__init__(self, parent)
         self.controller = controller
         self.file_path='./excels/history.xlsx'
-        self.data_path='./excels/lottery100.xlsx'
+        self.data_path='./excels/lottery.xlsx'
 
         balance = check_balance(self.data_path,self.file_path)
         message='Vốn còn: ' + '{:0,}đ'.format(balance)
@@ -251,7 +251,7 @@ class BalancePage(tk.Frame):
 
 
 def main():
-    data_path='./excels/lottery100.xlsx'
+    data_path='./excels/lottery.xlsx'
     file_path='./excels/history.xlsx'
 
     # input_data(file_path)

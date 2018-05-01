@@ -13,7 +13,7 @@ app.debug =True
 @app.route('/')
 def index():
     balance = check_balance('./excels/lottery300.xlsx','./excels/history.xlsx')
-    return render_template('index.html',balance=balance)
+    return render_template('index.html',balance='{:0,}đ'.format(balance))
 
 @app.route('/insert', methods=['GET', 'POST'])
 def insert():
@@ -25,19 +25,21 @@ def insert():
         amounts=request.form.getlist('amount')
         data=dict(zip(numbers, amounts))
         write_new_date(date,data,'./excels/history.xlsx')
-        return render_template('index.html',balance=balance)
+        balance = check_balance('./excels/lottery300.xlsx','./excels/history.xlsx')
+        return render_template('index.html',balance='{:0,}đ'.format(balance))
 
 @app.route('/history')
 def history():
-    data=convert_history_to_dict('./excels/history.xlsx')
-    data = OrderedDict(sorted(data.items(), key=lambda t: t[0]))# sort the date
-    return render_template('history.html',data=data)
 
-@app.route('/result')
-def result():
-    data=convert_data_to_dict('./excels/lottery300.xlsx')
-    data = OrderedDict(sorted(data.items(), key=lambda t: t[0]))# sort the date
-    return render_template('result.html',data=data)
+    capital ,won,lose,daily_capital= check_balance_detail('./excels/lottery300.xlsx','./excels/history.xlsx')
+    data=convert_history_to_dict('./excels/history.xlsx')
+    data = OrderedDict(sorted(data.items(), key = lambda x:datetime.datetime.strptime(x[0], '%d-%m-%Y')))
+
+    print('won',won)
+    print('lose',lose)
+    balance = check_balance('./excels/lottery300.xlsx','./excels/history.xlsx')
+    return render_template('history.html',data=data,won=won,lose=lose,daily_capital=daily_capital,balance='{:0,}đ'.format(balance))
+
 
 
 
@@ -136,7 +138,7 @@ def write_new_date(date,data,file_path):
         i+=1
 
     sheet.cell(row=max_row+1,column=date_col).value=date
-    # print(max_row)
+
 
 
     sheet.merge_cells(start_row=int(max_row+1),start_column=date_col,end_row=int(max_row+2),end_column=date_col)
@@ -210,6 +212,58 @@ def convert_data_to_dict(path_dir):
     return data
 
 
+def check_balance_detail(data_path,history_path):
+    capital = 50000000#start capital
+    win_rate = 80/22
+
+    win_money_per_tickey=80000
+    money_per_ticket=22000
+
+    history=convert_history_to_dict(history_path)
+    data=convert_data_to_dict(data_path)
+    won={}
+    lose={}
+    daily_capital={}
+
+    for date in history.keys():
+        day = history[date]
+
+        daily_capital[date]=0
+        won[date]={}
+        lose[date]={}
+        temp_win={}
+        temp_lose={}
+
+        for idx,number in enumerate(day['number']):
+            capital -= int(day['amount'][idx])*money_per_ticket # NOTE: first it will minus your fee
+
+            #compute daily capital
+            daily_capital[date]-= int(day['amount'][idx])*money_per_ticket
+
+            try:# in case the day in history isn't there and it still counts
+                day_result = data[date]#get resylt of that day
+                capital += int(day['amount'][idx])*win_money_per_tickey*day_result[int(number)] # NOTE: then will plus with win and multiple rate
+                daily_capital[date]+= int(day['amount'][idx])*win_money_per_tickey*day_result[int(number)]
+                print(1)
+                if day_result[int(number)]!=0:#if result of this number that day != 0 so we won
+                    temp_win[number]=day['amount'][idx]
+                    print(2)
+                else:
+                    print(3)
+                    temp_lose[number]=day['amount'][idx]
+
+
+            except:
+                temp_lose[number]=day['amount'][idx]#in case the day we insert is future. it will store as lose
+
+
+
+        won[date]=temp_win
+        lose[date]=temp_lose
+
+    return capital,won,lose,daily_capital
+
+
 def check_balance(data_path,history_path):
     capital = 50000000#start capital
     win_rate = 80/22
@@ -220,15 +274,14 @@ def check_balance(data_path,history_path):
     history=convert_history_to_dict(history_path)
     data=convert_data_to_dict(data_path)
 
-    for date in history.keys():
-        day = history[date]
-        try:## if day are not in data so pass it
-            day_result = data[date]
-            for idx,number in enumerate(day['number']):
-                capital -= int(day['amount'][idx])*money_per_ticket # NOTE: first it will minus your fee
+    for date in history.keys():#loop through date in history
+        day = history[date]#number and amount of that day
+        for idx,number in enumerate(day['number']):
+            capital -= int(day['amount'][idx])*money_per_ticket # NOTE: first it will minus your fee
+            try:#neu ngay nhap chua den thi se ko co cong tien nhung van bi tru tien
+                day_result = data[date]#get resylt of that day
                 capital += int(day['amount'][idx])*win_money_per_tickey*day_result[int(number)] # NOTE: then will plus with win and multiple rate
-
-        except:
-            pass
+            except:
+                pass
 
     return capital

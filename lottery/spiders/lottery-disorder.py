@@ -38,7 +38,7 @@ class lottery(scrapy.Spider):
     name='lot2'
 
     def __init__(self):
-        self.file_path='./excels/lotteryfull.xlsx'
+        self.file_path='./excels/lottery-2007.xlsx'
         try:
             wb=openpyxl.load_workbook(self.file_path)
             self.exist=True
@@ -59,7 +59,7 @@ class lottery(scrapy.Spider):
         #generate urls
 
         # days,self.start_urls=get_list_of_N_day_ago(5970)
-        self.start_urls=get_urls([2014],[1,2,3,4,5,6,7,8,9,10,11,12])
+        self.start_urls=get_urls([2007],[1,2,3,4,5,6,7,8,9,10,11,12])
         self.current=0#keep track current date to write
 
 
@@ -81,8 +81,6 @@ class lottery(scrapy.Spider):
         for url in self.start_urls:
             date= url.split('=')
             yield scrapy.Request(url=url, callback=self.parse,meta={'date':date[1]})
-
-
 
 
 

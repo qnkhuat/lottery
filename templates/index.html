@@ -4,8 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title></title>
 
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/jquery.datetimepicker.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <script src="{{ url_for('static', filename='js/active.js') }}"></script>
+
+
+    </script>
     {% block css %} {% endblock %}
 
 
@@ -13,13 +21,49 @@
   <body>
 
 
-    <h3>{{balance}}</h3>
 
-    {% block content %}{% endblock %}
-    <a href="/insert"><button>Nhập lịch sử</button></a>
-    <a href="/history"><button>Xem lịch sử</button></a>
+    <div id="container">
+      <div class="wrap">
+        <h3>{{balance}}</h3>
+        <div class="container">
+          {% block content %}
+          <a href="/insert" ><button class="btn btn-primary">Nhập lịch sử</button></a>
+          <a href="/history"><button class="btn btn-primary">Xem lịch sử</button></a>
+          {% endblock %}
+        </div>
+      </div>
+
+    </div>
+
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script src="{{ url_for('static', filename='js/jquery.datetimepicker.full.min.js') }}"></script>
+
+    <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      jQuery.datetimepicker.setLocale('vi');
+
+      jQuery('#datetimepicker').datetimepicker({
+      timepicker:false,
+      format:'d-m-Y'
+      });
+
+    });
+
+
+    </script>
+    {% block js %}{% endblock %}
+
+
+
+
+
+
   </body>
 </html>

@@ -1,10 +1,34 @@
 {% extends "index.html" %}
 
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/insert.css') }}">
+{% endblock %}
 
+{% block js %}
+<script src="{{url_for('static',filename='js/active.js')}}"></script>
+{% endblock %}
 
 {% block content %}
-<input type="datetime" placeholder="Ngày">
-<input type="number" placeholder="Số">
-<input type="number" placeholder="Điểm">
+<form action="/insert" method='post'>
+  <div id="insert">
+    <input id="datetimepicker" name='date' type="text" class="form-control day" placeholder="Ngày" required>
 
+    <input type="number" name="number" placeholder="Số"  class="form-control number " required>
+    <input type="number" name="amount" placeholder="Điểm"  class="form-control amount" required>
+
+
+  </div>
+  <div class="btn btn-info" onclick='addmore()'>+</div>
+
+  <div class="wrap">
+  <a href="/" ><button type='submit' class="btn btn-danger">Lưu</button></a>
+  <!-- <a href="/" ><button class="btn btn-info">Ngày mới</button></a> -->
+  </div>
+</form>
+
+
+<div class="wrap">
+<a href="/" ><button class="btn btn-primary">Trang chủ</button></a>
+<a href="/history"><button class="btn btn-primary">Xem lịch sử</button></a>
+</div>
 {% endblock %}

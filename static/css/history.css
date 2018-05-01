@@ -1,10 +1,39 @@
 table{
-
+  margin: 10px auto;
+  font-size: 17px;
+}
+th,td{
+  text-align: center;
+}
+th.date{
+  padding: 5px;
 }
 
-table td{
-  width: 30px;
-  text-align: center;
-  height: 20px;
-  border: 1px solid black;
+td.number{
+  width: 40px;
+}
+td.amount{
+  width: 40px;
+  background: #55efc4;
+}
+.title{
+  background: #95a5a6;
+  width: 60px;
+}
+.head{
+  background: #74b9ff;
+}
+.daily{
+  background: #ecf0f1;
+  padding: 10px;
+}
+
+.won{
+  background: #e74c3c;
+  color: black;
+
+}
+.lose{
+  background: black;
+  color: white;
 }
