@@ -7,8 +7,8 @@ th,td{
 }
 th.date{
   padding: 5px;
+  background: #74b9ff;
 }
-
 td.number{
   width: 40px;
 }
@@ -17,21 +17,16 @@ td.amount{
   background: #55efc4;
 }
 .title{
-  background: #95a5a6;
-  width: 60px;
-}
-.head{
   background: #74b9ff;
+  width: 60px;
 }
 .daily{
   background: #ecf0f1;
   padding: 10px;
 }
-
 .won{
   background: #e74c3c;
   color: black;
-
 }
 .lose{
   background: black;

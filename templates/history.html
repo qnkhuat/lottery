@@ -4,25 +4,24 @@
 {% endblock %}
 
 {% block content %}
-  
+
   <table border='1'>
     {% for date,day in data.items() %}
     <tr>
 
-      <tr>
+      <tr class='day'>
         <th rowspan="2" class='head date'>{{date}}</th>
         <th rowspan="2" class=' daily'>{{daily_capital[date]}}</th>
         <td class='title'>Số</td>
+        {% for number,amount in won[date].items() %}
+          <td class='number won'>{{number}}</td>
+        {% endfor %}
+        {% for number,amount in lose[date].items() %}
+          <td class='number lose'>{{number}}</td>
+        {% endfor %}
+        </tr>
 
-      {% for number,amount in won[date].items() %}
-        <td class='number won'>{{number}}</td>
-      {% endfor %}
-      {% for number,amount in lose[date].items() %}
-        <td class='number lose'>{{number}}</td>
-      {% endfor %}
-      </tr>
-
-      <tr>
+      <tr class='day'>
         <td class='title'>Trứng</td>
         {% for number,amount in won[date].items() %}
           <td class='amount'>{{amount}}</td>

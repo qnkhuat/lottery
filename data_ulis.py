@@ -4,8 +4,9 @@ import re
 from pprint import pprint
 from openpyxl.styles import Color, PatternFill, Font, Border
 import logging
-logging.basicConfig(level=logging.INFO,filename='app.log',
-                format='%(asctime)s %(levelname)s %(message)s')
+# logging.basicConfig(level=logging.INFO,filename='app.log',
+#                 format='%(asctime)s %(levelname)s %(message)s')
+
 '''
 - Check balance
 - Input
@@ -66,7 +67,7 @@ def write_new_date(date,data,file_path):
 
     sheet.merge_cells(start_row=int(max_row+1),start_column=date_col,end_row=int(max_row+2),end_column=date_col)
     wb.save(file_path)
-    logging.info('Wrote new transaction')
+    # logging.info('Wrote new transaction')
 
 
 
@@ -186,7 +187,7 @@ def scrawl_day(days,urls,data_path):
 
             max_row+=1#update to write next part
             wb.save(data_path)
-            logging.info('Scrawling data of '+day)
+            # logging.info('Scrawling data of '+day)
 
 
 
@@ -301,3 +302,52 @@ def input_digit(content):
             return value
         else :
             print('Không hợp lệ')
+
+def check_balance_detail(data_path,history_path):
+    capital = 50000000#start capital
+    win_rate = 80/22
+
+    win_money_per_tickey=80000
+    money_per_ticket=22000
+
+    history=convert_history_to_dict(history_path)
+    data=convert_data_to_dict(data_path)
+    won={}
+    lose={}
+    daily_capital={}
+
+    for date in history.keys():
+        day = history[date]
+
+        daily_capital[date]=0
+        won[date]={}
+        lose[date]={}
+        temp_win={}
+        temp_lose={}
+
+        for idx,number in enumerate(day['number']):
+            capital -= int(day['amount'][idx])*money_per_ticket # NOTE: first it will minus your fee
+
+            #compute daily capital
+            daily_capital[date]-= int(day['amount'][idx])*money_per_ticket
+
+            try:# in case the day in history isn't there and it still counts
+                day_result = data[date]#get resylt of that day
+                capital += int(day['amount'][idx])*win_money_per_tickey*day_result[int(number)] # NOTE: then will plus with win and multiple rate
+                daily_capital[date]+= int(day['amount'][idx])*win_money_per_tickey*day_result[int(number)]
+                if day_result[int(number)]!=0:#if result of this number that day != 0 so we won
+                    temp_win[number]=day['amount'][idx]
+                else:
+                    temp_lose[number]=day['amount'][idx]
+            except:
+                temp_lose[number]=day['amount'][idx]#in case the day we insert is future. it will store as lose
+
+
+
+        won[date]=temp_win
+        lose[date]=temp_lose
+
+    return capital,won,lose,daily_capital
+
+if __name__ == '__main__':
+    main()
