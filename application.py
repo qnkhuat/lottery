@@ -13,7 +13,6 @@ app.debug =True
 
 @app.route('/')
 def index():
-
     try:
         update('excels/lottery.xlsx')
     except:
@@ -41,3 +40,10 @@ def history():
     data = OrderedDict(sorted(data.items(), key = lambda x:datetime.datetime.strptime(x[0], '%d-%m-%Y')))
     balance = check_balance('./excels/lottery300.xlsx','./excels/history.xlsx')
     return render_template('history.html',data=data,won=won,lose=lose,daily_capital=daily_capital,balance='{:0,}đ'.format(balance))
+
+
+
+# if __name__ == '__main__':
+#     import logging
+#     logging.basicConfig(filename='error.log',level=logging.DEBUG)
+#     app.run()

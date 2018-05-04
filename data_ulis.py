@@ -5,7 +5,6 @@ from pprint import pprint
 from openpyxl.styles import Color, PatternFill, Font, Border
 import logging
 # logging.basicConfig(level=logging.INFO,filename='app.log',
-#                 format='%(asctime)s %(levelname)s %(message)s')
 
 '''
 - Check balance
@@ -156,18 +155,16 @@ def scrawl_day(days,urls,data_path):
     import bs4
     import requests
 
+
+
+    wb=open_file(data_path)
     for idx,day in enumerate(days):
         res = requests.get(urls[idx])
         layout = bs4.BeautifulSoup(res.text,'lxml')
-
-
-        wb=open_file(data_path)
+        print('Scrawling data of ',day)
         for sheet_name in ['100','300','800','all']:
             sheet=wb[sheet_name]
             max_row=sheet.max_row
-
-
-
             divs =layout.select('.chu17.need_blank')# all number of that day
             numbers = dict((el,0) for el in range(100))
             for div in divs:
@@ -186,8 +183,8 @@ def scrawl_day(days,urls,data_path):
                     sheet.cell(row=max_row+1,column=idx+2).fill=get_color(number)
 
             max_row+=1#update to write next part
-            wb.save(data_path)
-            # logging.info('Scrawling data of '+day)
+    wb.save(data_path)
+        # logging.info('Scrawling data of '+day)
 
 
 
