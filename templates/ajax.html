@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+
+{% block content %}
+
+<form id='form'>
+  <input id='currency' type="text" name="currency" value="">
+  <input type="submit">
+</form>
+
+<div id="result">
+
+</div>
+
+{% endblock %}
+
+
+{% block js %}
+<script src=' {{ url_for("static",filename="js/ajax.js")}}'></script>
+
+{% endblock %}

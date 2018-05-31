@@ -1,10 +1,11 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,jsonify
 import openpyxl as xl
 import datetime
 from collections import OrderedDict
 import os
-# from data_ulis import check_balance,check_balance_detail,write_new_date,convert_data_to_dict,convert_history_to_dict
+import requests
 from data_ulis import *
+
 
 
 app = Flask(__name__)
@@ -18,7 +19,9 @@ def index():
     except:
         pass
     balance = check_balance('./excels/lottery300.xlsx','./excels/history.xlsx')
+
     return render_template('index.html',balance='{:0,}đ'.format(balance))
+
 
 @app.route('/insert', methods=['GET', 'POST'])
 def insert():
@@ -41,6 +44,23 @@ def history():
     balance = check_balance('./excels/lottery300.xlsx','./excels/history.xlsx')
     return render_template('history.html',data=data,won=won,lose=lose,daily_capital=daily_capital,balance='{:0,}đ'.format(balance))
 
+
+@app.route('/display')
+def display():
+    return render_template('ajax.html')
+
+@app.route('/ajax',methods=['POST'])
+def ajax():
+    ## XXX: test AJAX
+    currency = request.form.get('currency')
+    res = requests.get('http://md5.jsontest.com/',params={'text':currency})
+
+    if res.status_code != 200 :
+        return jsonify({'success':False})
+
+    data = res.json()
+
+    return jsonify({'success':True, 'md5':data['md5']})
 
 
 # if __name__ == '__main__':

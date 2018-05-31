@@ -53,7 +53,7 @@ def get_frequency(sheet):
     row=max_row +1 +1 +1
     sheet.cell(row=row,column=1).value='Chuỗi dài nhất:'
     row=max_row +1 +1 +1 +1
-    sheet.cell(row=row,column=1).value=':Lọc chuỗi:'
+    sheet.cell(row=row,column=1).value='Lọc chuỗi:'
 
     for i in range(1,50):#print 50 occurencies
         row = max_row +1 +1 +1 +1 + i
@@ -110,8 +110,7 @@ def main():
     update(file_path)
     wb=openpyxl.load_workbook(file_path)
 
-    # for sheet_name in ['100','300','800','all']:
-    for sheet_name in ['100']:
+    for sheet_name in ['100','300','800','all']:
         sheet=wb[sheet_name]
         sheet.freeze_panes=sheet['B2']
         get_frequency(sheet)#NOTE dont change order of this functions.
