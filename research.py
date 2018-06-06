@@ -45,18 +45,22 @@ def get_frequency(sheet):
     max_row=sheet.max_row+1
     max_col=sheet.max_column
 
+    row = max_row +1
+    sheet.cell(row=row,column=1).value='Dãy:'
+    for i in range(100):
+        sheet.cell(row=row,column= i+2).value=i
 
-    row=max_row +1
-    sheet.cell(row=row,column=1).value='Chuỗi:'
     row=max_row +1 +1
-    sheet.cell(row=row,column=1).value='Trung bình xuất hiện:'
+    sheet.cell(row=row,column=1).value='Chuỗi:'
     row=max_row +1 +1 +1
-    sheet.cell(row=row,column=1).value='Chuỗi dài nhất:'
+    sheet.cell(row=row,column=1).value='Trung bình xuất hiện:'
     row=max_row +1 +1 +1 +1
+    sheet.cell(row=row,column=1).value='Chuỗi dài nhất:'
+    row=max_row +1 +1 +1 +1 +1
     sheet.cell(row=row,column=1).value='Lọc chuỗi:'
 
     for i in range(1,50):#print 50 occurencies
-        row = max_row +1 +1 +1 +1 + i
+        row = max_row +1 +1 +1 +1 +1 + i
         sheet.cell(row=row,column=1).value=i
 
     for i in range(2,max_col+1):#loop through column
@@ -64,7 +68,7 @@ def get_frequency(sheet):
         appeareance=[]
         result = ''
         max=0
-        for l in range(1,max_row+2):#loop through rows----- +2 for skip a line
+        for l in range(1,max_row+1):#loop through rows----- +2 for skip a line
             if l==max_row-1:#when go to the last line NOTE: -2 is the amount of line to skip
                 if sheet.cell(row=l,column=i).value is not None:#when a number appear
                     if frequency==0:
@@ -90,9 +94,9 @@ def get_frequency(sheet):
                 else:
                     frequency+=1
 
-        sheet.cell(row=l,column=i).value=result#+1 because don't overwrite percentage
-        sheet.cell(row=l+1,column=i).value=np.mean(appeareance)
-        sheet.cell(row=l+2,column=i).value=max
+        sheet.cell(row=l+2,column=i).value=result#+1 because don't overwrite percentage
+        sheet.cell(row=l+3,column=i).value=np.mean(appeareance)
+        sheet.cell(row=l+4,column=i).value=max
 
 
 
@@ -101,8 +105,8 @@ def get_frequency(sheet):
         for key,val in Counter(appeareance).items():
             if key == 0:
                 continue
-            sheet.cell(row=l+2 +1 + key ,column=i).fill=get_color(val)
-            sheet.cell(row=l+2 +1 + key ,column=i).value=val
+            sheet.cell(row=l+2 +2 +1 + key ,column=i).fill=get_color(val)
+            sheet.cell(row=l+2 +2 +1 + key ,column=i).value=val
 
 
 
@@ -110,7 +114,7 @@ def main():
     update(file_path)
     wb=openpyxl.load_workbook(file_path)
 
-    for sheet_name in ['100','300','800','all']:
+    for sheet_name in ['100']:
         sheet=wb[sheet_name]
         sheet.freeze_panes=sheet['B2']
         get_frequency(sheet)#NOTE dont change order of this functions.
